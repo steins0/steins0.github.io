@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="编译原理," />
 
 
 
@@ -79,14 +79,21 @@
 
 
 
+<meta name="description" content="词法分析1 概述1.1相关问题1.1.1单词的基本分类： 关键字（保留字或者基本字）：它们是字母的固定串 在程序设计语言中有固定的意义，不再允许用户定义它们表示其他意义。例如if whlie for int等等 标识符：由用户自己定义的一个字符串，通常是由一个字母开头的数字与字母组合，用于命令程序中的变量。 字变量:直接写出的数据，3.14，true，’abc’等 运算符：+ - * &#x2F; 等等 分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pl-2&#x2F;pl-2">
+<meta property="og:title" content="编译原理复习总结（2）">
 <meta property="og:url" content="http://yoursite.com/2020/07/13/pl-2/pl-2/index.html">
 <meta property="og:site_name" content="steins">
-<meta property="article:published_time" content="2020-07-13T06:33:21.430Z">
-<meta property="article:modified_time" content="2020-07-13T10:46:58.032Z">
+<meta property="og:description" content="词法分析1 概述1.1相关问题1.1.1单词的基本分类： 关键字（保留字或者基本字）：它们是字母的固定串 在程序设计语言中有固定的意义，不再允许用户定义它们表示其他意义。例如if whlie for int等等 标识符：由用户自己定义的一个字符串，通常是由一个字母开头的数字与字母组合，用于命令程序中的变量。 字变量:直接写出的数据，3.14，true，’abc’等 运算符：+ - * &#x2F; 等等 分">
+<meta property="og:image" content="http://yoursite.com/images/pl/pl-7.png">
+<meta property="og:image" content="http://yoursite.com/images/pl/pl-8.png">
+<meta property="og:image" content="http://yoursite.com/images/pl/pl-9.png">
+<meta property="article:published_time" content="2020-07-13T06:33:14.000Z">
+<meta property="article:modified_time" content="2020-07-13T10:51:36.375Z">
 <meta property="article:author" content="Steins.lei">
+<meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/pl/pl-7.png">
 
 
 
@@ -122,7 +129,7 @@
 
 
 
-  <title>pl-2/pl-2 | steins</title>
+  <title>编译原理复习总结（2） | steins</title>
   
 
 
@@ -266,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pl-2/pl-2</h1>
+          <h1 class="post-title" itemprop="name headline">编译原理复习总结（2）</h1>
         
 
         <div class="post-meta">
@@ -278,7 +285,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-13T14:33:21+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-13T14:33:14+08:00">
                 2020-07-13
               </time>
             
@@ -288,6 +295,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2020-spring/" itemprop="url" rel="index">
+                    <span itemprop="name">2020-spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -316,7 +345,48 @@
       
 
       
-        
+        <h1 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><h3 id="1-1相关问题"><a href="#1-1相关问题" class="headerlink" title="1.1相关问题"></a>1.1相关问题</h3><h4 id="1-1-1单词的基本分类："><a href="#1-1-1单词的基本分类：" class="headerlink" title="1.1.1单词的基本分类："></a>1.1.1单词的基本分类：</h4><ul>
+<li>关键字（保留字或者基本字）：它们是字母的固定串 在程序设计语言中有固定的意义，不再允许用户定义它们表示其他意义。例如if whlie for int等等</li>
+<li>标识符：由用户自己定义的一个字符串，通常是由一个字母开头的数字与字母组合，用于命令程序中的变量。</li>
+<li>字变量:直接写出的数据，3.14，true，’abc’等</li>
+<li>运算符：+ - * / 等等</li>
+<li>分隔符：分号，冒号等</li>
+</ul>
+<h4 id="1-1-2术语："><a href="#1-1-2术语：" class="headerlink" title="1.1.2术语："></a>1.1.2术语：</h4><ul>
+<li>模式（patten）：产生和识别元素的规则 </li>
+<li>记号（token）：按照某个模式（或规则）识别出的元素（一组） </li>
+<li>单词（lexeme）：被识别出的元素自身的值（一个），也称为词值  </li>
+</ul>
+<h3 id="1-2词法分析器的功能和与工作方式"><a href="#1-2词法分析器的功能和与工作方式" class="headerlink" title="1.2词法分析器的功能和与工作方式"></a>1.2词法分析器的功能和与工作方式</h3><h4 id="1-2-1词法分析器的功能："><a href="#1-2-1词法分析器的功能：" class="headerlink" title="1.2.1词法分析器的功能："></a>1.2.1词法分析器的功能：</h4><p>&emsp;&emsp;依次扫描源程序中的各个字符，逐个识别出单词，并转换为内部编码形式的记号流作为输出。<br>&emsp;&emsp;任务：</p>
+<ul>
+<li>滤掉源程序中的无用成分，如注释、空格、回车等</li>
+<li>识别出源程序中的各个单词符号，并将其转换为内部编码形式</li>
+<li>处理与具体平台有关的输入（如文件结束符的不同表示等）</li>
+<li>识别记号，并交给语法分析器。根据模式识别记号</li>
+<li>调用符号表管理器或出错处理器，进行相关处理   </li>
+</ul>
+<h4 id="1-2-2-工作方式"><a href="#1-2-2-工作方式" class="headerlink" title="1.2.2 工作方式"></a>1.2.2 工作方式</h4><ul>
+<li>词法分析器作为编译器独立执行任务，即单独进行一遍扫描。它以源程序为输入，以记号流为输出。<br><img src="/images/pl/pl-7.png" alt="alt"><br>&emsp;&emsp;这种工作方式优点有：首先是设计简单；其次是改进编译效率；另外，增强了编译系统的可移植性。其缺点就是由于词法分析输出的是记号流，这将占用较大的存储空间。  </li>
+<li>词法分析器作为语法分析器的子程序执行任务，即每当语法分析器需要一个记号时，就调用词法分析器，并得到一个识别出的记号。<br><img src="/images/pl/pl-8.png" alt="alt"><br>&emsp;&emsp;在这种工作方式下可以使用高级语言,因为高级语言的特性，这种工作方式最常采用，也最容易实现。  </li>
+<li>词法分析器与语法分析器并行工作的方式。<br><img src="/images/pl/pl-9.png" alt="alt"><br>&emsp;&emsp;这种方式下，为了提高编译效率，可以通过使用队列，使得词法分析器和语法分析器以生产/消费的形式并行工作。  </li>
+</ul>
+<h3 id="1-3-源程序的输入和预处理"><a href="#1-3-源程序的输入和预处理" class="headerlink" title="1.3 源程序的输入和预处理"></a>1.3 源程序的输入和预处理</h3><h4 id="1-3-1源程序的输入。"><a href="#1-3-1源程序的输入。" class="headerlink" title="1.3.1源程序的输入。"></a>1.3.1源程序的输入。</h4><p>&emsp;&emsp;词法分析器的任务是从左到右逐个字符地读入源程序，对构成源程序的字符流进行扫描和分解，从而识别出一个个单词（也称单词符号或符号），把作为字符串的源程序改造成为单词符号串的中间程序  </p>
+<h4 id="1-3-2预处理"><a href="#1-3-2预处理" class="headerlink" title="1.3.2预处理"></a>1.3.2预处理</h4><p>&emsp;&emsp;预处理就是去除注释、无用的空白、跳格、回车、换行符等处理。构造一个预处理子程序，完成去除注释、无用的空白、跳格、回车、换行符等处理的任务后，将其装入词法分析器的扫描缓冲区。</p>
+<h2 id="2-模式的形式化描述"><a href="#2-模式的形式化描述" class="headerlink" title="2 模式的形式化描述"></a>2 模式的形式化描述</h2><h3 id="2-1-语言"><a href="#2-1-语言" class="headerlink" title="2.1 语言"></a>2.1 语言</h3><h4 id="2-1-1定义-乔姆斯基（Chomsky）"><a href="#2-1-1定义-乔姆斯基（Chomsky）" class="headerlink" title="2.1.1定义(乔姆斯基（Chomsky）):"></a>2.1.1定义(乔姆斯基（Chomsky）):</h4><p>语言L是有限字母表∑上有限长度字符串的集合  </p>
+<ul>
+<li>字母表是组成字符串的所有字符的集合。换句话说，字符串中的所有字符取自字母表。  </li>
+</ul>
+<p>定义中强调两个有限，因为计算机的表示能力有限 ：  </p>
+<ul>
+<li>字母表是有限的，即字母表中元素是有限多个；</li>
+<li>字符串的长度是有限的，即字符串中字符个数是有限多个。<br>例：ASCII字符集。。  <h4 id="2-2-2"><a href="#2-2-2" class="headerlink" title="2.2.2"></a>2.2.2</h4>设X为一个字符串  </li>
+<li><em>前缀*</em>：移走 x 的尾部的零个或多于零个符号之后余下的部分。  </li>
+<li><em>后缀*</em>：删去 x 的头部的零个或多于零个符号之后余下的部分。  </li>
+<li><em>子串*</em>: 从 x 中删去一个前缀和一个后缀之后余下的部分。<br>例: x = steins<br>前缀： 空串，s,st,ste,stei,stein,steins<br>后缀： steins,teins,eins,ins,ns,s,空串<br>子串：steins,stein,teins,…,空串<br>当且仅当 x 的前缀不是 x 本身时，则称其为 x 的<strong>真前缀</strong>，同理，当且仅当 x 的后缀不是 x 本身时，则称其为 x的<strong>真后缀</strong>。</li>
+</ul>
+<p>子序列：  </p>
+<h4 id="2-2-3字符串的运算："><a href="#2-2-3字符串的运算：" class="headerlink" title="2.2.3字符串的运算："></a>2.2.3字符串的运算：</h4><p>交<br>并<br>方幂<br>星闭包<br>正闭包  </p>
+
       
     </div>
     
@@ -330,6 +400,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag"># 编译原理</a>
+          
+        </div>
       
 
       
@@ -400,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -465,6 +550,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#词法分析"><span class="nav-number">1.</span> <span class="nav-text">词法分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-number">1.1.</span> <span class="nav-text">1 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1相关问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1相关问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1单词的基本分类："><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.1.1单词的基本分类：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2术语："><span class="nav-number">1.1.1.2.</span> <span class="nav-text">1.1.2术语：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2词法分析器的功能和与工作方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2词法分析器的功能和与工作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1词法分析器的功能："><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1词法分析器的功能：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-工作方式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.2 工作方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-源程序的输入和预处理"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 源程序的输入和预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1源程序的输入。"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">1.3.1源程序的输入。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2预处理"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">1.3.2预处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-模式的形式化描述"><span class="nav-number">1.2.</span> <span class="nav-text">2 模式的形式化描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-语言"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 语言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1定义-乔姆斯基（Chomsky）"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">2.1.1定义(乔姆斯基（Chomsky）):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.2.2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3字符串的运算："><span class="nav-number">1.2.1.3.</span> <span class="nav-text">2.2.3字符串的运算：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
