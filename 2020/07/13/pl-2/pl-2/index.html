@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-16.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-17.png">
 <meta property="article:published_time" content="2020-07-13T06:33:14.000Z">
-<meta property="article:modified_time" content="2020-08-24T03:17:19.691Z">
+<meta property="article:modified_time" content="2020-08-24T03:33:56.308Z">
 <meta property="article:author" content="Steins.lei">
 <meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary">
@@ -436,7 +436,7 @@
 转换矩阵：M[si,a]是一个状态。  
 且字母表不包括ε。  </code></pre><h4 id="3-3-3-DFA的等价"><a href="#3-3-3-DFA的等价" class="headerlink" title="3.3.3 DFA的等价"></a>3.3.3 DFA的等价</h4><pre><code>若有限自动机M和M&apos;识别同一正规集，则称M和M&apos;是等价的，记为M=M&apos;。</code></pre><h2 id="4-从正规式到词法分析器"><a href="#4-从正规式到词法分析器" class="headerlink" title="4 从正规式到词法分析器"></a>4 从正规式到词法分析器</h2><h3 id="构造过程"><a href="#构造过程" class="headerlink" title="构造过程"></a>构造过程</h3><h4 id="4-1-构造正规式"><a href="#4-1-构造正规式" class="headerlink" title="4.1 构造正规式"></a>4.1 构造正规式</h4><h4 id="4-2-构造NFA-（Thompson算法）"><a href="#4-2-构造NFA-（Thompson算法）" class="headerlink" title="4.2 构造NFA （Thompson算法）"></a>4.2 构造NFA （Thompson算法）</h4><pre><code>作用：将正规式转化为等价的NFA
 输入：正规式r
-输出：NFA</code></pre><p><img src="/images/pl/pl-13.png" alt="alt"><br>    图借鉴marsCatXDU的笔记  </p>
+输出：NFA</code></pre><p><img src="/images/pl/pl-13.png" alt="alt"></p>
 <h4 id="4-3-确定化"><a href="#4-3-确定化" class="headerlink" title="4.3 确定化"></a>4.3 确定化</h4><pre><code>不确定性：
 1. 从一个状态通过同样的字符可以达到不同的下一状态；
 2. 允许出现 ε 状态转移。
@@ -467,7 +467,7 @@
 <h4 id="4-4-最小化"><a href="#4-4-最小化" class="headerlink" title="4.4 最小化"></a>4.4 最小化</h4><blockquote>
 <p>步骤：<br>1.初始划分：终态与非终态；<br>2.利用可区分的概念，反复分裂划分中的组Gi，直到不可再分裂；<br>3.由最终划分构造D’，关键是选代表和修改状态转移；<br>4.消除可能的死状态和不可达状态。<br>例：<br><img src="/images/pl/pl-17.png" alt="alt"></p>
 </blockquote>
-
+<pre><code>图借鉴marsCatXDU的笔记  </code></pre>
       
     </div>
     
