@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-26.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-27.png">
 <meta property="article:published_time" content="2020-08-24T03:25:30.000Z">
-<meta property="article:modified_time" content="2020-08-24T14:16:05.145Z">
+<meta property="article:modified_time" content="2020-08-24T14:17:54.714Z">
 <meta property="article:author" content="Steins.lei">
 <meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary">
@@ -354,13 +354,12 @@
       
         <h2 id="1-上下文无关文法（CFG）"><a href="#1-上下文无关文法（CFG）" class="headerlink" title="1.上下文无关文法（CFG）"></a>1.上下文无关文法（CFG）</h2><h3 id="1-1-四元组"><a href="#1-1-四元组" class="headerlink" title="1.1 四元组"></a>1.1 四元组</h3><p>CFG可以用一个四元组标识 G=(N, T, P, S)<br><strong>N</strong>是非终结符（Nonterminals）的有限集合；<br><strong>T</strong>是终结符（Terminals）的有限集合，且N∩T=Φ<br><strong>P</strong>是产生式（Productions）的有限集合，A→α，其中A∈N（左部），α∈(N∪T)<em>（右部）<br>*</em>S**是非终结符，称为文法的开始符号（Start symbol）  </p>
 <p>例：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例1：</span><br><span class="line">   N=&#123;E&#125;   T=&#123;+，*，(，)，-，id&#125;    S=E  </span><br><span class="line">P:	E → E + E	(1)  </span><br><span class="line"><span class="code">	E → E * E	(2)  </span></span><br><span class="line"><span class="code">	E → (E)		(3)  </span></span><br><span class="line"><span class="code">	E → -E		(4)  </span></span><br><span class="line"><span class="code">	E → id		(4)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例1：</span><br><span class="line">   N&#x3D;&#123;E&#125;   T&#x3D;&#123;+，*，(，)，-，id&#125;    S&#x3D;E  </span><br><span class="line">P:	E → E + E	(1)  </span><br><span class="line">	E → E * E	(2)  </span><br><span class="line">	E → (E)		(3)  </span><br><span class="line">	E → -E		(4)  </span><br><span class="line">	E → id		(4)</span><br></pre></td></tr></table></figure>
 <h3 id="1-2-产生式的合并"><a href="#1-2-产生式的合并" class="headerlink" title="1.2 产生式的合并"></a>1.2 产生式的合并</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例1的重写：</span><br><span class="line">E → E + E       （1）</span><br><span class="line">      | E * E       （2）</span><br><span class="line">      |（E）        （3）</span><br><span class="line">      | -E          （4）</span><br><span class="line">      | id          （5）</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-推导"><a href="#2-推导" class="headerlink" title="2.推导"></a>2.推导</h2><h3 id="2-1-句子与句型"><a href="#2-1-句子与句型" class="headerlink" title="2.1 句子与句型"></a>2.1 句子与句型</h3><p>由CFG G所产生的语言L(G)被定义为:  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L(G) &#x3D; &#123; ω┃S&#x3D;+&gt;ω and ω∈T* &#125;，</span><br></pre></td></tr></table></figure>
-
-<p>L(G)称为<strong>上下文无关语言</strong>(Context Free Language, CFL)<br>ω称为<strong>句子</strong>。<br>若S=*&gt;α，α∈(N∪T)<em>，则称α为G的一个*</em>句型**。</p>
+<p>L(G)称为<strong>上下文无关语言</strong>(Context Free Language, CFL)<br>ω称为<strong>句子</strong>。<br>若S=*&gt;α，α∈(N∪T)<em>，则称α为G的一个*</em>句型**</p>
 <h3 id="2-3-直接推导、最左-右推导，左-由句型"><a href="#2-3-直接推导、最左-右推导，左-由句型" class="headerlink" title="2.3 直接推导、最左/右推导，左/由句型"></a>2.3 直接推导、最左/右推导，左/由句型</h3><ol>
 <li>利用产生式产生句子的过程中，将产生式A→γ的右部代替文法符号序列αAβ中的A得到αγβ的过程，称为αAβ直接推导出αγβ，记作：αAβ=&gt;αγβ。  </li>
 <li>直接推导：用产生式的规则进行符号的替换，其中-&gt;表示规则，=&gt;表示推导</li>
