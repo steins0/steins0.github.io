@@ -92,11 +92,11 @@
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-22.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-23.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-24.png">
-<meta property="og:image" content="http://yoursite.com/2020/08/24/pl-3/pl-3/.images/pl/pl-25.png">
+<meta property="og:image" content="http://yoursite.com/images/pl/pl-25.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-26.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-27.png">
 <meta property="article:published_time" content="2020-08-24T03:25:30.000Z">
-<meta property="article:modified_time" content="2020-08-24T14:17:54.714Z">
+<meta property="article:modified_time" content="2020-08-24T16:55:03.148Z">
 <meta property="article:author" content="Steins.lei">
 <meta property="article:tag" content="编译原理">
 <meta name="twitter:card" content="summary">
@@ -429,7 +429,7 @@
 </blockquote>
 <p><strong>例</strong><br>文法：(1)S→aABe    (2)A→b    (3)A→Abc   (4)B→d，对句子 abbcde 的最左规约是：<br>abbcde &lt;= aAbcde &lt;= aAde &lt;= aABe &lt;= S<br>上面这个过程，从左往右看是最左规约（称为规范规约），从右往左看就是最右推导了<br>其实，上面的过程是非常简略的，这里有一些关键的细节需要到后面才能逐渐搞明白。比如，第二步到第三步规约的时候，为什么没有把 aAbcde 规约为 aAAcde？（这是因为如果这样规约就无法继续规约下去了）解决这个问题其实就要用到我们前面博客中说过的 FIRST、FOLLOW 集合以及下推栈。  </p>
 <h3 id="3-2-3-剪句柄"><a href="#3-2-3-剪句柄" class="headerlink" title="3.2.3 剪句柄"></a>3.2.3 剪句柄</h3><p><img src="/images/pl/pl-24.png" alt="alt"></p>
-<h2 id="3-3-移进规约"><a href="#3-3-移进规约" class="headerlink" title="3.3 移进规约"></a>3.3 移进规约</h2><p>移进：读一个字符<br>规约：进行一次替换<br><img src=".images/pl/pl-25.png" alt="alt"><br>未解决的问题：  </p>
+<h2 id="3-3-移进规约"><a href="#3-3-移进规约" class="headerlink" title="3.3 移进规约"></a>3.3 移进规约</h2><p>移进：读一个字符<br>规约：进行一次替换<br><img src="/images/pl/pl-25.png" alt="alt"><br>未解决的问题：  </p>
 <ol>
 <li>如何保证移进后总是正确的</li>
 <li>什么时候进行规约（剪句柄）</li>
