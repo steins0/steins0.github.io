@@ -87,8 +87,9 @@
 <meta property="og:description" content="设计题目：电影线上评分系统设计与实现web学习：从最初的网页开始简单的html1234567891011&lt;!DOCTYPE html&gt;&lt;html&gt;  &lt;head&gt;    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;    &lt;title&gt;我的测试页面&lt;&#x2F;title&gt;  &lt;&#x2F;head&gt;  &lt;body&gt;">
 <meta property="og:image" content="http://yoursite.com/images/web/web-1.png">
 <meta property="og:image" content="http://yoursite.com/images/web/web-2.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/28/web-1/images/web/web-3.png">
 <meta property="article:published_time" content="2020-09-28T15:15:35.000Z">
-<meta property="article:modified_time" content="2020-09-28T15:45:44.157Z">
+<meta property="article:modified_time" content="2020-09-28T16:47:43.076Z">
 <meta property="article:author" content="Steins.lei">
 <meta property="article:tag" content="web">
 <meta property="article:tag" content="数字媒体方向设计">
@@ -356,8 +357,34 @@
 </ol>
 <p><strong>class</strong>是属性名称，<strong>editor-note</strong>是属性的值。<br><strong>class</strong> 属性可为元素提供一个标识名称，以便进一步为元素指定样式或进行其他操作时使用。<br>属性应该包含：  </p>
 <blockquote>
-<p>a.在属性与元素名称（或上一个属性，如果有超过一个属性的话）之间的空格符。<br>b.属性的名称，并接上一个等号。<br>c.由引号所包围的属性值。  </p>
+<p>a.在属性与元素名称（或上一个属性，如果有超过一个属性的话）之间的空格符。<br>b.属性的名称，并接上一个等号。<br>c.由引号所包围的属性值。<br>3. <strong>html详解</strong>  </p>
 </blockquote>
+<p>&lt;!DOCTYPE html&gt; — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，DOCTYPE 用来链接一些 HTML 编写守则，比如自动查错之类。DOCTYPE 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。<br>&lt;html&gt;&lt;/html&gt; — &lt;html&gt; 元素。该元素包含整个页面的内容，也称作根元素。<br>&lt;head&gt;&lt;/head&gt; — &lt;head&gt; 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（keywords）、页面描述、CSS 样式表和字符编码声明等。<br>&lt;meta charset=”utf-8”&gt; — 该元素指定文档使用 UTF-8 字符编码 ，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。<br>&lt;title&gt;&lt;/title&gt; — &lt;title&gt; 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。<br>&lt;body&gt;&lt;/body&gt; — &lt;body&gt; 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。<br> 4. 图像</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/interlude_01.png"</span> <span class="attr">alt</span>=<span class="string">"我的测试页面"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>该元素通过包含图像文件路径的地址属性 <strong>src</strong>，可在所在位置嵌入图像。<br>该元素还包括一个替换文字属性 <strong>alt</strong>，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：<br>用户有视觉障碍。视障用户可以使用屏幕阅读器来朗读 alt 属性的内容。<br>有些错误使图像无法显示。可以试着故意将 src 属性里的路径改错。保存并刷新页面就可以在图像位置看到：  </p>
+<blockquote>
+<blockquote>
+<p>我的测试页面</p>
+</blockquote>
+</blockquote>
+<ol start="4">
+<li><p>标题<br>标题元素可用于指定内容的标题和子标题。就像一本书的书名、每章的大标题、小标题，等。HTML 文档也是一样。HTML 包括六个级别的标题， &lt;h1&gt;–&lt;h6&gt; ，一般最多用到 3-4 级标题。  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>主标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>顶层标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>子标题<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>次子标题<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>段落  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>steins是一个摸鱼晚期患者-1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>steins是一个摸鱼晚期患者<span class="tag">&lt;<span class="name">-2</span>/<span class="attr">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>列表  </p>
+<blockquote>
+<p>无序列表（Unordered List）中项目的顺序并不重要，就像购物列表。用一个&lt;ul&gt; 元素包围。<br>有序列表（Ordered List）中项目的顺序很重要，就像烹调指南。用一个&lt;ol&gt; 元素包围。  </p>
+</blockquote>
+</li>
+<li><p>链接  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>my blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span>    //<span class="tag">&lt;<span class="name">a</span>&gt;</span> — a 是 "anchor" （锚）的缩写  </span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>my blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span>    //为此 <span class="tag">&lt;<span class="name">a</span>&gt;</span> 元素添加一个 href 属性</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://steins0.github.io/"</span>&gt;</span>my blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span>    //把属性的值设置为所需网址</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>href 这个名字可能开始看起来有点令人费解，代表超文本引用（ hypertext reference）。  </p>
+</blockquote>
+</li>
+</ol>
+<p><img src="images/web/web-3.png" alt="alt">  </p>
 
       
     </div>
