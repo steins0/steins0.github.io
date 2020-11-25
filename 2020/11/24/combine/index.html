@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="833," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="计算机系统概论计算机的基本组成硬件部分早期的计算机由运算器，控制器，存储器，输入设备，输出设备五大部分构成。 软件组成与分类 系统软件 操作系统——最重要的系统软件，用于系统的管理与调度 语言处理系统——用于支持用户和编程 通用程序——例如window下的word等 各种服务支持软件——调试程序、诊断程序..   应用软件 用户为解决自己问题而编写的程序，计算器，信息管理..    冯·诺依曼计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计组复习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/11/24/combine/index.html">
+<meta property="og:site_name" content="steins">
+<meta property="og:description" content="计算机系统概论计算机的基本组成硬件部分早期的计算机由运算器，控制器，存储器，输入设备，输出设备五大部分构成。 软件组成与分类 系统软件 操作系统——最重要的系统软件，用于系统的管理与调度 语言处理系统——用于支持用户和编程 通用程序——例如window下的word等 各种服务支持软件——调试程序、诊断程序..   应用软件 用户为解决自己问题而编写的程序，计算器，信息管理..    冯·诺依曼计算">
+<meta property="og:image" content="http://yoursite.com/images/jz/1-1.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/1-2.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/1-3.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/1-4.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/1-5.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/1-6.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-3.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-4.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-5.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-6.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-7.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-8.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-9.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-10.png">
+<meta property="og:image" content="http://yoursite.com/images/jz/2-11.png">
+<meta property="article:published_time" content="2020-11-24T08:39:22.000Z">
+<meta property="article:modified_time" content="2020-11-25T14:32:12.918Z">
+<meta property="article:author" content="Steins.lei">
+<meta property="article:tag" content="833">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/jz/1-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/11/24/combine/"/>
+
+
+
+
+
+  <title>计组复习笔记 | steins</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">steins</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">杯中收纳了虚空倒影，畅饮这一弘蓝天白云</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/24/combine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Steins.lei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/own/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="steins">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计组复习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-24T16:39:22+08:00">
+                2020-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2020-autumn/" itemprop="url" rel="index">
+                    <span itemprop="name">2020-autumn</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="计算机系统概论"><a href="#计算机系统概论" class="headerlink" title="计算机系统概论"></a>计算机系统概论</h1><h2 id="计算机的基本组成"><a href="#计算机的基本组成" class="headerlink" title="计算机的基本组成"></a>计算机的基本组成</h2><h3 id="硬件部分"><a href="#硬件部分" class="headerlink" title="硬件部分"></a>硬件部分</h3><p>早期的计算机由<strong>运算器，控制器，存储器，输入设备，输出设备</strong>五大部分构成。<br><img src="/images/jz/1-1.png" alt="alt"></p>
+<h3 id="软件组成与分类"><a href="#软件组成与分类" class="headerlink" title="软件组成与分类"></a>软件组成与分类</h3><ul>
+<li>系统软件<ul>
+<li>操作系统——最重要的系统软件，用于系统的管理与调度</li>
+<li>语言处理系统——用于支持用户和编程</li>
+<li>通用程序——例如window下的word等</li>
+<li>各种服务支持软件——调试程序、诊断程序..</li>
+</ul>
+</li>
+<li>应用软件<ul>
+<li>用户为解决自己问题而编写的程序，计算器，信息管理..</li>
+</ul>
+</li>
+</ul>
+<h2 id="冯·诺依曼计算机原理"><a href="#冯·诺依曼计算机原理" class="headerlink" title="冯·诺依曼计算机原理"></a>冯·诺依曼计算机原理</h2><h3 id="冯·诺依曼计算机概念"><a href="#冯·诺依曼计算机概念" class="headerlink" title="冯·诺依曼计算机概念"></a>冯·诺依曼计算机概念</h3><p>是一种 将程序指令存储器和数据存储器合并在一起的计算机设计概念结构。<br><img src="/images/jz/1-2.png" alt="alt"></p>
+<p>工作原理：  </p>
+<blockquote>
+<p>将计算机要完成的任务用指令描述,并编成程序。<br>将程序存放在存储器中<br>在控制器的控制下,从存储器中逐条取出指令并执行<br>程序执行的结果即实现了计算机所要完成的任务  </p>
+</blockquote>
+<h3 id="冯·诺依曼计算机特点"><a href="#冯·诺依曼计算机特点" class="headerlink" title="冯·诺依曼计算机特点"></a>冯·诺依曼计算机特点</h3><ul>
+<li>指令与数据用二进制数字表示</li>
+<li>程序存放在存储器中</li>
+<li>系统中所有功能部件受控制器的控制</li>
+<li>依据存储程序控制原理工作</li>
+</ul>
+<h2 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h2><h3 id="层次结构图"><a href="#层次结构图" class="headerlink" title="层次结构图"></a>层次结构图</h3><p><img src="/images/jz/1-3.png" alt="alt"></p>
+<h3 id="各层的含义和界面定义"><a href="#各层的含义和界面定义" class="headerlink" title="各层的含义和界面定义"></a>各层的含义和界面定义</h3><p><img src="/images/jz/1-4.png" alt="alt"></p>
+<h3 id="计算机体系结构、组成和实现"><a href="#计算机体系结构、组成和实现" class="headerlink" title="计算机体系结构、组成和实现"></a>计算机体系结构、组成和实现</h3><ol>
+<li>计算机组成：<br>从计算机系统的内部来研究计算机的构成，主要内容包括：运算方法、CPU 组成、主存储器和输入输出设备、输入输出接口等。 </li>
+<li>计算机系统结构：<br>从外部研究计算机系统。它是使用者（机器语言、汇编语言、系统程序员）所看到的物理计算机的抽象，是编写出能够在机器上正确运行的程序所必须了解到的计算机的属性。</li>
+<li>计算机组成的物理实现<br>集成电路芯片、电子元器件、部件、插头、插座</li>
+<li><strong>系统结构</strong>决定了计算机的总体属性，<strong>组成</strong>是体现这些属性的逻辑设计，而<strong>实现</strong>则是用具体的器件来实现逻辑功能。</li>
+</ol>
+<h2 id="计算机的分类和性能描述"><a href="#计算机的分类和性能描述" class="headerlink" title="计算机的分类和性能描述"></a>计算机的分类和性能描述</h2><h3 id="Flynn分类法"><a href="#Flynn分类法" class="headerlink" title="Flynn分类法"></a>Flynn分类法</h3><p>前提知识：  </p>
+<blockquote>
+<p>CU：控制单元  CS：控制流  MM：存储单元  DS：数据流  PU：处理单元  IS：指令流</p>
+</blockquote>
+<ul>
+<li>单指令流单数据流 SISD</li>
+<li>单指令流多数据流 SIMD</li>
+<li>多指令流单数据流 MISD</li>
+<li>多指令流多数据流 MIMD</li>
+</ul>
+<h3 id="Amdahl定律和应用"><a href="#Amdahl定律和应用" class="headerlink" title="Amdahl定律和应用"></a>Amdahl定律和应用</h3><ol>
+<li>定律内容：<br>计算机系统中某一部件由于采用某种更快的执行方式后，整个系统性能的提高与这种执行方式的使用频率或占总执行时间的比例有关。</li>
+<li>加速比 = $\frac{改进后的系统性能}{改进前的系统性能}$ =  $\frac{改进前的系统总执行时间}{改进后的系统总执行时间}$  </li>
+<li>可改进比例:f<sub>e</sub>—程序的总执行时间为100s，可改进的部分是其中的20s，则f<sub>e</sub>＝0.2.可见，f<sub>e</sub>总是小于或等1的。</li>
+<li>部件加速比r<sub>e</sub>—例如，某部件改进后，执行时间由原来的20s减少到5s，则部件加速比r<sub>e</sub>＝$\frac{20}{5}$＝4。可见，r<sub>e</sub>一般是大于1的。</li>
+</ol>
+<ul>
+<li>Amdahl公式：<br>若假设改进前的系统总执行时间为T<sub>0</sub>，可以得出改进后的系统总执行时间T<sub>n</sub><br><img src="/images/jz/1-5.png" alt="alt"><br>若加速比用S<sub>p</sub>表示，则加速比S<sub>p</sub>可表示为：<br><img src="/images/jz/1-6.png" alt="alt"><br>&lt;!– ### 吞吐量、相应时间</li>
+</ul>
+<h3 id="CPU时钟周期、主频、CPI、CPU执行时间"><a href="#CPU时钟周期、主频、CPI、CPU执行时间" class="headerlink" title="CPU时钟周期、主频、CPI、CPU执行时间"></a>CPU时钟周期、主频、CPI、CPU执行时间</h3><h3 id="MIPS、MFLOPS-–-gt"><a href="#MIPS、MFLOPS-–-gt" class="headerlink" title="MIPS、MFLOPS –&gt;"></a>MIPS、MFLOPS –&gt;</h3><h1 id="计算机系统中的数据表示"><a href="#计算机系统中的数据表示" class="headerlink" title="计算机系统中的数据表示"></a>计算机系统中的数据表示</h1><h2 id="数制与编码"><a href="#数制与编码" class="headerlink" title="数制与编码"></a>数制与编码</h2><h3 id="进位计数制和相互转化"><a href="#进位计数制和相互转化" class="headerlink" title="进位计数制和相互转化"></a>进位计数制和相互转化</h3><p>二进制：逢二进一<br>八进制：逢八进一<br>十进制：逢十进一<br>十六进制：逢F进一（16进制中，A表示十进制11，B表示十进制12..）</p>
+<h3 id="真值与机器数"><a href="#真值与机器数" class="headerlink" title="真值与机器数"></a>真值与机器数</h3><p>各种数值数据在计算机中表示的形式称为<strong>机器数</strong>，采用二进制表示。机器数对应的实际数值称为数的<strong>真值</strong>。</p>
+<h3 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h3><p>在计算机中，用4位二进制编码来表示二进制数据。4位编码有16种形式，从中选出10种来表示0~9十个数字。  </p>
+<ol>
+<li>有权码  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>8421码</th>
+<th>5421码</th>
+<th>2421码</th>
+<th>5211码</th>
+<th>4311码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0001</td>
+<td>0001</td>
+<td>001</td>
+<td>0001</td>
+<td>0001</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>无权码<br>余三码： 8421码 + 3（0011）</li>
+</ol>
+<h3 id="字符与字符串"><a href="#字符与字符串" class="headerlink" title="字符与字符串"></a>字符与字符串</h3><p>ASCII码：7位编码  高3位是列编码，低四位是行编码，一共表示128个字符</p>
+<h3 id="汉字编码"><a href="#汉字编码" class="headerlink" title="汉字编码"></a>汉字编码</h3><h2 id="定点数据表示"><a href="#定点数据表示" class="headerlink" title="定点数据表示"></a>定点数据表示</h2><h3 id="无符号数的表示与有符号数的表示"><a href="#无符号数的表示与有符号数的表示" class="headerlink" title="无符号数的表示与有符号数的表示"></a>无符号数的表示与有符号数的表示</h3><ul>
+<li>无符号数表示正数，在机器数中没有符号位；</li>
+<li>有符号数用数字化的“0”表示“正”，“1”表示“负”，符号放在有效数字的最前面。</li>
+</ul>
+<h3 id="原码、反码、补码、移码"><a href="#原码、反码、补码、移码" class="headerlink" title="原码、反码、补码、移码"></a>原码、反码、补码、移码</h3><ol>
+<li>原码：  <ul>
+<li>真值与原码之间的转换：<br>真值转原码，符号位+/-转0/1，数值位照写；<br>原码转真值，符号位0/1转+/-，数值位照写。  </li>
+</ul>
+</li>
+<li>反码：<ul>
+<li>反码与原码之间的转换：<br>真值X&gt;=0,[X]<sub>原</sub>=[X]<sub>反</sub><br>真值X&lt;0，原码-&gt;反码，符号位不变，反码数值部分是原码每位取反</li>
+</ul>
+</li>
+<li>补码：  <ul>
+<li>补码与反码之间的转换：<br>若真值X&gt;=0,[X]<sub>原</sub>=[X]<sub>反</sub>=[X]<sub>补</sub><br>真值X&lt;0，反码-&gt;补码，符号位不变，补码数值部分是反码+1</li>
+</ul>
+</li>
+<li>移码：补码符号位取反<h2 id="浮点数据表示"><a href="#浮点数据表示" class="headerlink" title="浮点数据表示"></a>浮点数据表示</h2></li>
+</ol>
+<h3 id="格式定义"><a href="#格式定义" class="headerlink" title="格式定义"></a>格式定义</h3><p>F = M * R<sup>E</sup>  (类比科学计数法： -2000 = -2 * 10<sup>3</sup>)<br>一般有两种形式：<br>| 阶符 | 阶码数值部分 | 数符 | 尾数数值部分 |<br>|-|-|-|-|</p>
+<table>
+<thead>
+<tr>
+<th>数符</th>
+<th>阶符</th>
+<th>阶码数值部分</th>
+<th>尾数数值部分</th>
+</tr>
+</thead>
+</table>
+<h3 id="规格化"><a href="#规格化" class="headerlink" title="规格化"></a>规格化</h3><p>当基值R = 2时，规格化浮点数的尾数绝对值应该在$\frac{1}{2}$-1之间</p>
+<h3 id="IEEE-754标准"><a href="#IEEE-754标准" class="headerlink" title="IEEE-754标准"></a>IEEE-754标准</h3><p>单精度浮点数：<br>| 数符（1位）| 阶码=阶符+阶码数值（1+7 =8位） |  尾数数值部分（23位） |<br>|-|-|-|<br>|0/1|移码|原码|</p>
+<h2 id="纠错与校验"><a href="#纠错与校验" class="headerlink" title="纠错与校验"></a>纠错与校验</h2><h3 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h3><ol>
+<li>水平奇校验：当X内有奇数个1时，校验位C=0，接收方校验结果为1时，无错。</li>
+<li>水平偶校验：当X内有偶数个1时，校验位C=0，接收方校验结果为0时，无错。</li>
+<li>垂直奇偶校验</li>
+<li>水平垂直奇偶校验：先垂直后水平</li>
+</ol>
+<h3 id="汉明码"><a href="#汉明码" class="headerlink" title="汉明码"></a>汉明码</h3><p><a href="https://www.cnblogs.com/lesroad/p/8688634.html" target="_blank" rel="noopener">网站</a></p>
+<h3 id="循环冗余校验-CRC"><a href="#循环冗余校验-CRC" class="headerlink" title="循环冗余校验(CRC)"></a>循环冗余校验(CRC)</h3><p>CRC码是一种具有很强的检错和一定纠错能力的数据校验编码。常用于数据通信以及外部存储器的数据校验。<br>过程：<br>有已知有效信息X（n个数据位），一个构成多项式G(X)（k+1）位</p>
+<ol>
+<li>将有效信息X左移K位，移空处填0，得到一个n+k位数据——M(X)</li>
+<li>用M(X)除以G(X)得到一个k位余数，与M(X)相加得到CRC码</li>
+<li>校验过程：CRC码除以G(X)，余数为0，没有出错</li>
+</ol>
+<h1 id="运算方法和运算器"><a href="#运算方法和运算器" class="headerlink" title="运算方法和运算器"></a>运算方法和运算器</h1><h3 id="原码的加减运算"><a href="#原码的加减运算" class="headerlink" title="原码的加减运算"></a>原码的加减运算</h3><blockquote>
+<p>[X+Y]<sub>原</sub> = [X]<sub>原</sub>+[Y]<sub>原</sub><br>[X-Y]<sub>原</sub> = [X]<sub>原</sub>-[Y]<sub>原</sub>  </p>
+</blockquote>
+<h2 id="补码的加减运算"><a href="#补码的加减运算" class="headerlink" title="补码的加减运算"></a>补码的加减运算</h2><h3 id="运算定义"><a href="#运算定义" class="headerlink" title="运算定义"></a>运算定义</h3><ol>
+<li>补码相加： [X+Y]<sub>补</sub> = [X]<sub>补</sub>+[Y]<sub>补</sub>  </li>
+<li>补码相减： 减数连同符号位一起求补（取反+1）后，与被减数相加<br>[X-Y]<sub>补</sub> = [X]<sub>补</sub>+[-Y]<sub>补</sub> = [X]<sub>补</sub>+[[Y]<sub>补</sub>]<sub>求补</sub> </li>
+<li>溢出：只有同符号相加/异符号相减才可能溢出</li>
+</ol>
+<h3 id="溢出判定"><a href="#溢出判定" class="headerlink" title="溢出判定"></a>溢出判定</h3><ol>
+<li>双符号位判断：用11表示负，用00表示正，一旦溢出，双符号位一定不一致</li>
+<li>进位判决法： 若Cn-1为最高数值位向符号位的进位，Cn表示符号位向更高位的进位，则判别溢出的逻辑表示式为：<strong>OF＝Cn-1⊕Cn</strong></li>
+<li>根据符号位和进位标志辨别：<strong>OF＝SF⊕CF</strong>——适用于同号相加或异号求差（SF符号位，CF进位标志）</li>
+<li>设X<sub>S</sub>,Y<sub>S</sub>,Z<sub>S</sub>分别是两个操作数和结果的符号位，则：<strong>OF =</strong> $X_S<em>Y_S</em>\overline{Z_S}+\overline{X_S}<em>\overline{Y_S}</em>Z_S$</li>
+</ol>
+<h3 id="行波进位加法器、先行进位加法器"><a href="#行波进位加法器、先行进位加法器" class="headerlink" title="行波进位加法器、先行进位加法器"></a>行波进位加法器、先行进位加法器</h3><ol>
+<li>行波进位加法器<br><img src="/images/jz/2-3.png" alt="alt"></li>
+<li>先行进位加法器<br><img src="/images/jz/2-4.png" alt="alt"></li>
+</ol>
+<h2 id="乘除运算"><a href="#乘除运算" class="headerlink" title="乘除运算"></a>乘除运算</h2><h3 id="原码乘法，补码乘法"><a href="#原码乘法，补码乘法" class="headerlink" title="原码乘法，补码乘法"></a>原码乘法，补码乘法</h3><ol>
+<li>原码一位乘<br><img src="/images/jz/2-5.png" alt="alt"></li>
+<li>原码两位乘<br>操作表：<img src="/images/jz/2-6.png" alt="alt"><br>计算过程：<img src="/images/jz/2-7.png" alt="alt"></li>
+<li>补码一位乘<ul>
+<li>布斯法：</li>
+<li>操作表：<img src="/images/jz/2-8.png" alt="alt"></li>
+<li>计算过程：<img src="/images/jz/2-9.png" alt="alt"></li>
+</ul>
+</li>
+<li>补码二位乘<ul>
+<li>操作表：<img src="/images/jz/2-10.png" alt="alt"></li>
+<li>计算过程：<img src="/images/jz/2-11.png" alt="alt"></li>
+</ul>
+</li>
+</ol>
+<h3 id="阵列乘法"><a href="#阵列乘法" class="headerlink" title="阵列乘法"></a>阵列乘法</h3><h3 id="补码除法"><a href="#补码除法" class="headerlink" title="补码除法"></a>补码除法</h3><h3 id="阵列除法"><a href="#阵列除法" class="headerlink" title="阵列除法"></a>阵列除法</h3><h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><h3 id="浮点数的加-减运算"><a href="#浮点数的加-减运算" class="headerlink" title="浮点数的加/减运算"></a>浮点数的加/减运算</h3><ol>
+<li>对阶</li>
+<li>尾数加减</li>
+<li>规格化（是否溢出由阶码决定）</li>
+<li>溢出处理：<ul>
+<li>上溢：结果记无穷</li>
+<li>舍入：规格化右移导致会丢掉尾数的末尾，处理方法：①末尾置0 ②末尾置1 ③0舍1入</li>
+</ul>
+</li>
+</ol>
+<h3 id="浮点数的乘法运算"><a href="#浮点数的乘法运算" class="headerlink" title="浮点数的乘法运算"></a>浮点数的乘法运算</h3><ol>
+<li>判断是否规范化，若有浮点数为0，结果为0</li>
+<li>求阶码：两阶码之和，上溢无法表示，下溢结果为0</li>
+<li>两尾数相乘</li>
+<li>规格化尾数</li>
+</ol>
+<h3 id="浮点数的除法运算"><a href="#浮点数的除法运算" class="headerlink" title="浮点数的除法运算"></a>浮点数的除法运算</h3><ol>
+<li>判断是否规范化，若有被除数为0，结果为0，除数不能为0</li>
+<li>求阶码：阶码=被除数阶码-除数阶码，上溢无法表示，下溢结果为0</li>
+<li>两尾数相除</li>
+<li>规格化尾数</li>
+<li>舍入处理</li>
+</ol>
+<h2 id="算术逻辑单元ALU"><a href="#算术逻辑单元ALU" class="headerlink" title="算术逻辑单元ALU"></a>算术逻辑单元ALU</h2><h1 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h1>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/833/" rel="tag"># 833</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/12/review/" rel="next" title="数据结构提纲">
+                <i class="fa fa-chevron-left"></i> 数据结构提纲
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/own/avatar.jpg"
+                alt="Steins.lei" />
+            
+              <p class="site-author-name" itemprop="name">Steins.lei</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机系统概论"><span class="nav-number">1.</span> <span class="nav-text">计算机系统概论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机的基本组成"><span class="nav-number">1.1.</span> <span class="nav-text">计算机的基本组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件部分"><span class="nav-number">1.1.1.</span> <span class="nav-text">硬件部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件组成与分类"><span class="nav-number">1.1.2.</span> <span class="nav-text">软件组成与分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冯·诺依曼计算机原理"><span class="nav-number">1.2.</span> <span class="nav-text">冯·诺依曼计算机原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冯·诺依曼计算机概念"><span class="nav-number">1.2.1.</span> <span class="nav-text">冯·诺依曼计算机概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冯·诺依曼计算机特点"><span class="nav-number">1.2.2.</span> <span class="nav-text">冯·诺依曼计算机特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机系统的层次结构"><span class="nav-number">1.3.</span> <span class="nav-text">计算机系统的层次结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#层次结构图"><span class="nav-number">1.3.1.</span> <span class="nav-text">层次结构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各层的含义和界面定义"><span class="nav-number">1.3.2.</span> <span class="nav-text">各层的含义和界面定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机体系结构、组成和实现"><span class="nav-number">1.3.3.</span> <span class="nav-text">计算机体系结构、组成和实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机的分类和性能描述"><span class="nav-number">1.4.</span> <span class="nav-text">计算机的分类和性能描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flynn分类法"><span class="nav-number">1.4.1.</span> <span class="nav-text">Flynn分类法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amdahl定律和应用"><span class="nav-number">1.4.2.</span> <span class="nav-text">Amdahl定律和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU时钟周期、主频、CPI、CPU执行时间"><span class="nav-number">1.4.3.</span> <span class="nav-text">CPU时钟周期、主频、CPI、CPU执行时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MIPS、MFLOPS-–-gt"><span class="nav-number">1.4.4.</span> <span class="nav-text">MIPS、MFLOPS –&gt;</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机系统中的数据表示"><span class="nav-number">2.</span> <span class="nav-text">计算机系统中的数据表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数制与编码"><span class="nav-number">2.1.</span> <span class="nav-text">数制与编码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进位计数制和相互转化"><span class="nav-number">2.1.1.</span> <span class="nav-text">进位计数制和相互转化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真值与机器数"><span class="nav-number">2.1.2.</span> <span class="nav-text">真值与机器数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BCD码"><span class="nav-number">2.1.3.</span> <span class="nav-text">BCD码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符与字符串"><span class="nav-number">2.1.4.</span> <span class="nav-text">字符与字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#汉字编码"><span class="nav-number">2.1.5.</span> <span class="nav-text">汉字编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定点数据表示"><span class="nav-number">2.2.</span> <span class="nav-text">定点数据表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无符号数的表示与有符号数的表示"><span class="nav-number">2.2.1.</span> <span class="nav-text">无符号数的表示与有符号数的表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原码、反码、补码、移码"><span class="nav-number">2.2.2.</span> <span class="nav-text">原码、反码、补码、移码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数据表示"><span class="nav-number">2.3.</span> <span class="nav-text">浮点数据表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式定义"><span class="nav-number">2.3.1.</span> <span class="nav-text">格式定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规格化"><span class="nav-number">2.3.2.</span> <span class="nav-text">规格化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IEEE-754标准"><span class="nav-number">2.3.3.</span> <span class="nav-text">IEEE-754标准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#纠错与校验"><span class="nav-number">2.4.</span> <span class="nav-text">纠错与校验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#奇偶校验码"><span class="nav-number">2.4.1.</span> <span class="nav-text">奇偶校验码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#汉明码"><span class="nav-number">2.4.2.</span> <span class="nav-text">汉明码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环冗余校验-CRC"><span class="nav-number">2.4.3.</span> <span class="nav-text">循环冗余校验(CRC)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算方法和运算器"><span class="nav-number">3.</span> <span class="nav-text">运算方法和运算器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原码的加减运算"><span class="nav-number">3.0.1.</span> <span class="nav-text">原码的加减运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补码的加减运算"><span class="nav-number">3.1.</span> <span class="nav-text">补码的加减运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运算定义"><span class="nav-number">3.1.1.</span> <span class="nav-text">运算定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#溢出判定"><span class="nav-number">3.1.2.</span> <span class="nav-text">溢出判定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行波进位加法器、先行进位加法器"><span class="nav-number">3.1.3.</span> <span class="nav-text">行波进位加法器、先行进位加法器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#乘除运算"><span class="nav-number">3.2.</span> <span class="nav-text">乘除运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原码乘法，补码乘法"><span class="nav-number">3.2.1.</span> <span class="nav-text">原码乘法，补码乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阵列乘法"><span class="nav-number">3.2.2.</span> <span class="nav-text">阵列乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码除法"><span class="nav-number">3.2.3.</span> <span class="nav-text">补码除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阵列除法"><span class="nav-number">3.2.4.</span> <span class="nav-text">阵列除法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数"><span class="nav-number">3.3.</span> <span class="nav-text">浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数的加-减运算"><span class="nav-number">3.3.1.</span> <span class="nav-text">浮点数的加&#x2F;减运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数的乘法运算"><span class="nav-number">3.3.2.</span> <span class="nav-text">浮点数的乘法运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数的除法运算"><span class="nav-number">3.3.3.</span> <span class="nav-text">浮点数的除法运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术逻辑单元ALU"><span class="nav-number">3.4.</span> <span class="nav-text">算术逻辑单元ALU</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储系统"><span class="nav-number">4.</span> <span class="nav-text">存储系统</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Steins.lei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"log":false});</script></body>
+</html>
