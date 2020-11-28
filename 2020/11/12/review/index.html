@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="线性表线性表的概念 线性表是具有相同数据类型的n（n≥0）个数据元素的有限序列  线性表的操作主要操作：   123456初始化 Initlist()销毁 droplist()插入 insertlist()删除 deletelist()按值查找 findbyvalue()按位查找  findbylocat()  其他操作： 123求表长输出判空（isempty）  顺序表存储结构逻辑相邻+地址相邻">
+<meta name="description" content="线性表线性表的概念 线性表是具有相同数据类型的n（n≥0）个数据元素的有限序列  线性表的操作主要操作：   123456初始化 Initlist()销毁 droplist()插入 insertlist()删除 deletelist()按值查找 findbyvalue()按位查找  findbylocat() 其他操作： 123求表长输出判空（isempty） 顺序表存储结构逻辑相邻+地址相邻 实">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构提纲">
 <meta property="og:url" content="http://yoursite.com/2020/11/12/review/index.html">
 <meta property="og:site_name" content="steins">
-<meta property="og:description" content="线性表线性表的概念 线性表是具有相同数据类型的n（n≥0）个数据元素的有限序列  线性表的操作主要操作：   123456初始化 Initlist()销毁 droplist()插入 insertlist()删除 deletelist()按值查找 findbyvalue()按位查找  findbylocat()  其他操作： 123求表长输出判空（isempty）  顺序表存储结构逻辑相邻+地址相邻">
+<meta property="og:description" content="线性表线性表的概念 线性表是具有相同数据类型的n（n≥0）个数据元素的有限序列  线性表的操作主要操作：   123456初始化 Initlist()销毁 droplist()插入 insertlist()删除 deletelist()按值查找 findbyvalue()按位查找  findbylocat() 其他操作： 123求表长输出判空（isempty） 顺序表存储结构逻辑相邻+地址相邻 实">
 <meta property="og:image" content="http://yoursite.com/images/string/str-1.png">
 <meta property="og:image" content="http://yoursite.com/images/string/str-2.png">
 <meta property="og:image" content="http://yoursite.com/images/structure/tree-1.png">
 <meta property="og:image" content="http://yoursite.com/images/structure/6-1.png">
 <meta property="og:image" content="http://yoursite.com/images/structure/6-1.png">
 <meta property="article:published_time" content="2020-11-12T10:00:28.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:28:56.110Z">
+<meta property="article:modified_time" content="2020-11-28T11:43:08.005Z">
 <meta property="article:author" content="Steins.lei">
 <meta property="article:tag" content="833">
 <meta name="twitter:card" content="summary">
@@ -352,10 +352,8 @@
 </ul>
 <h3 id="线性表的操作"><a href="#线性表的操作" class="headerlink" title="线性表的操作"></a>线性表的操作</h3><p>主要操作：  </p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">初始化 Initlist()</span><br><span class="line">销毁 droplist()</span><br><span class="line">插入 insertlist()</span><br><span class="line">删除 deletelist()</span><br><span class="line">按值查找 findbyvalue()</span><br><span class="line">按位查找  findbylocat()</span><br></pre></td></tr></table></figure>
-
 <p>其他操作：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">求表长</span><br><span class="line">输出</span><br><span class="line">判空（isempty）</span><br></pre></td></tr></table></figure>
-
 <h3 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h3><h4 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h4><p>逻辑相邻+地址相邻</p>
 <h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><p>静态表： 数组实现<br>动态表： 指针实现（malloc或者new分配空间）</p>
 <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>随机访问，按位查找复杂度O(1)<br>存储密度高<br>扩展不方便<br>插入、删除不方便<br><a href="https://github.com/steins0/XDU-steins/blob/master/2020-autumn/%E8%80%83%E7%A0%94-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/list1.cpp" target="_blank" rel="noopener"><strong>代码</strong></a></p>
@@ -375,18 +373,18 @@
 <p>重要词汇：  </p>
 <blockquote>
 <p>栈顶:允许插入和删除的一端<br>栈顶元素：栈顶位置的元素<br>栈底:不允许插入和删除的一端<br>空栈:没有元素的栈</p>
-</blockquote>
 <h4 id="栈的基本操作"><a href="#栈的基本操作" class="headerlink" title="栈的基本操作"></a>栈的基本操作</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">初始化栈：initstack()</span><br><span class="line">销毁栈：dropstack()</span><br><span class="line">进栈：push()</span><br><span class="line">出栈：pop()</span><br><span class="line">返回栈顶元素：gettop()<span class="comment">//与出栈相比不消除栈顶元素——栈大小不变</span></span><br></pre></td></tr></table></figure>
 <h4 id="队列的概念（stack）"><a href="#队列的概念（stack）" class="headerlink" title="队列的概念（stack）"></a>队列的概念（stack）</h4><ul>
 <li>队列（Queue）是只允许在一端进行插入，在另一端删除的<strong>线性表</strong>  </li>
 </ul>
+</blockquote>
 <p>特性：  </p>
 <blockquote>
 <p>先进先出<br>重要词汇：<br>队头:允许删除的一端<br>队头元素：队头位置的元素<br>队尾:允许插入的一端<br>队尾元素：队尾位置的元素<br>空队列:没有元素的队列</p>
-</blockquote>
 <h4 id="队列的基本操作"><a href="#队列的基本操作" class="headerlink" title="队列的基本操作"></a>队列的基本操作</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">初始化队列：initqueue()</span><br><span class="line">销毁队列：dropqueue()</span><br><span class="line">进队：enqueue()</span><br><span class="line">出队：outqueue()</span><br><span class="line">返回队头元素：gettop()<span class="comment">//与出队相比不消除对头元素——队列大小不变</span></span><br></pre></td></tr></table></figure>
 <h3 id="顺序存储结构与链式存储结构"><a href="#顺序存储结构与链式存储结构" class="headerlink" title="顺序存储结构与链式存储结构"></a>顺序存储结构与链式存储结构</h3><h4 id="栈的顺序存储结构与链式存储结构"><a href="#栈的顺序存储结构与链式存储结构" class="headerlink" title="栈的顺序存储结构与链式存储结构"></a>栈的顺序存储结构与链式存储结构</h4><p><a href="https://github.com/steins0/XDU-steins/blob/master/2020-autumn/%E8%80%83%E7%A0%94-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/stack.cpp" target="_blank" rel="noopener">代码</a>  </p>
 <h4 id="队列的顺序存储结构与链式存储结构"><a href="#队列的顺序存储结构与链式存储结构" class="headerlink" title="队列的顺序存储结构与链式存储结构"></a>队列的顺序存储结构与链式存储结构</h4><p><a href="https://github.com/steins0/XDU-steins/blob/master/2020-autumn/%E8%80%83%E7%A0%94-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/queue.cpp" target="_blank" rel="noopener">代码</a></p>
+</blockquote>
 <h3 id="栈和队列的应用"><a href="#栈和队列的应用" class="headerlink" title="栈和队列的应用"></a>栈和队列的应用</h3><h4 id="栈的应用一——括号匹配"><a href="#栈的应用一——括号匹配" class="headerlink" title="栈的应用一——括号匹配"></a>栈的应用一——括号匹配</h4><ul>
 <li>用栈实现括号匹配：<br>依次扫描所有字符，遇到左括号入栈，遇到右括号则弹出栈顶元素检否匹配。  </li>
 <li>匹配失败情况：<br>①左括号单身<br>②右括号单身<br>③左右括号不匹配<h4 id="栈的应用二——算式求值"><a href="#栈的应用二——算式求值" class="headerlink" title="栈的应用二——算式求值"></a>栈的应用二——算式求值</h4></li>
@@ -410,12 +408,9 @@
 </li>
 <li><p>用栈实现中缀转后缀：<br>初始化一个栈，用于保存暂时还不能确定运算顺序的运算符。<br>从左到右处理各个元素，直到末尾。可能遇到三种情况：<br>① 遇到操作数。直接加入后缀表达式。<br>② 遇到界限符。遇到“(”直接入栈；遇到“)”则依次弹出栈内运算符并加入后缀表达式，直到<br>弹出“(”为止。注意：“(”不加入后缀表达式。<br>③ 遇到运算符。依次弹出栈中优先级高于或等于当前运算符的所有运算符，并加入后缀表达式，<br>若碰到“(” 或栈空则停止。之后再把当前运算符入栈。<br>按上述方法处理完所有字符后，将栈中剩余运算符依次弹出，并加入后缀表达式。  </p>
 <h4 id="栈的应用三——递归"><a href="#栈的应用三——递归" class="headerlink" title="栈的应用三——递归"></a>栈的应用三——递归</h4><h4 id="队列的应用"><a href="#队列的应用" class="headerlink" title="队列的应用"></a>队列的应用</h4></li>
-<li><p>树的层次遍历</p>
-</li>
-<li><p>图的广度优先搜索</p>
-</li>
-<li><p>操作系统的先来先去服务FCFS</p>
-</li>
+<li>树的层次遍历</li>
+<li>图的广度优先搜索</li>
+<li>操作系统的先来先去服务FCFS</li>
 </ol>
 <h2 id="串"><a href="#串" class="headerlink" title="串"></a>串</h2><h3 id="串的概率和操作"><a href="#串的概率和操作" class="headerlink" title="串的概率和操作"></a>串的概率和操作</h3><h4 id="串的基本概念"><a href="#串的基本概念" class="headerlink" title="串的基本概念"></a>串的基本概念</h4><ul>
 <li>串，即字符串（String）是由零个或多个字符组成的有限序列。一般记为S = ‘a<sub>1</sub>a<sub>2</sub>······a<sub>n</sub>‘ （n ≥0）  </li>
@@ -425,18 +420,16 @@
 </ul>
 <blockquote>
 <p>子串：串中任意个连续的字符组成的子序列。<br>主串：包含子串的串。<br>字符在主串中的位置：字符在串中的序号。<br>子串在主串中的位置：子串的第一个字符在主串中的位置  </p>
-</blockquote>
 <h4 id="串的基本操作"><a href="#串的基本操作" class="headerlink" title="串的基本操作"></a>串的基本操作</h4><h3 id="串的匹配"><a href="#串的匹配" class="headerlink" title="串的匹配"></a>串的匹配</h3><p>pat:  用于匹配的字符串  对应子字符位置j<br>txt： 被匹配的字符串  对应子字符位置i  </p>
 <h4 id="朴素匹配"><a href="#朴素匹配" class="headerlink" title="朴素匹配"></a>朴素匹配</h4><p>暴力匹配<br>每个i都从头开始一次关于pat的匹配</p>
 <h4 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h4><ol>
 <li>主要思路：<br>求解一个用于字符串pat信息的数据——next<br>如果p[j]位置与t[i]位置匹配失败，next会告诉我们pat字符串应该前进多少位置（当前位置在下一步应该用pat哪一个位置的来比较）<br>匹配成功或者首字符就不匹配都会使两个串的位置均前进  </li>
 <li>主要表示：<br>表示被匹配的字符串的位置i不会回退<br>j==0 是表示当前字符与第一个字符不匹配，因此ij++</li>
-<li>next数据求解<br>假设pat = ABCDABD  </li>
-<li>1 常规方法<br>找前缀子串和后缀子串的最大公共元素长度<br><img src="/images/string/str-1.png" alt="alt"><br>next为最大公共元素长度的后移且每项+1<br>首字符置零  </li>
-<li>2 状态机<br><img src="/images/string/str-2.png" alt="alt">  <h4 id="KMP优化"><a href="#KMP优化" class="headerlink" title="KMP优化"></a>KMP优化</h4></li>
+<li>next数据求解<br>假设pat = ABCDABD<br>3.1 常规方法<br>找前缀子串和后缀子串的最大公共元素长度<br><img src="/images/string/str-1.png" alt="alt"><br>next为最大公共元素长度的后移且每项+1<br>首字符置零<br>3.2 状态机<br><img src="/images/string/str-2.png" alt="alt">  <h4 id="KMP优化"><a href="#KMP优化" class="headerlink" title="KMP优化"></a>KMP优化</h4></li>
 <li>需要优化的地方：<br>以自动机为例，在上面例子中，状态6匹配字符若为other，则跳转状态2，此时字符会与2的状态在进行一次检测，这两次检测可以简化为单次检测</li>
 <li>优化方式</li>
 </ol>
+</blockquote>
 <h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><p><a href="https://github.com/steins0/XDU-steins/blob/master/2020-autumn/%E8%80%83%E7%A0%94-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%AD%97%E7%AC%A6%E4%B8%B2/KMP.cpp" target="_blank" rel="noopener">字符串</a></p>
 <h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="树-1"><a href="#树-1" class="headerlink" title="树"></a>树</h3><h4 id="树的基本概念"><a href="#树的基本概念" class="headerlink" title="树的基本概念"></a>树的基本概念</h4><ul>
 <li>树是n（n≥0）个结点的有限集合，n = 0时，称为空树，这是一种特殊情况。在任意一棵非空树中应满足：<br>1）有且仅有一个特定的称为根的结点。<br>2）当n &gt; 1时，其余结点可分为m（m &gt; 0）个互不相交的有限集合T1, T2,…, Tm，其中每个集合本身又是一棵树，并且称为根结点的子树。<h4 id="节点之间的关系"><a href="#节点之间的关系" class="headerlink" title="节点之间的关系"></a>节点之间的关系</h4></li>
@@ -491,9 +484,9 @@
 </ul>
 <h4 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h4><ol>
 <li>设非空二叉树中度为0、1和2的结点个数分别为n<sub>0</sub>、n<sub>1</sub>和n<sub>2</sub>，总节点为n<ul>
-<li>n = n<sub>0</sub> + n<sub>1</sub> + n<sub>2</sub> — ①</li>
-<li>n = n<sub>1</sub> + 2*n<sub>2</sub> + 1 (节点数 = 总度数 + 1 ) —②</li>
-<li>n<sub>0</sub> = n<sub>2</sub> + 1   —由①②推出</li>
+<li>n = n<sub>0</sub> + n<sub>1</sub> + n<sub>2</sub> —- ①</li>
+<li>n = n<sub>1</sub> + 2*n<sub>2</sub> + 1 (节点数 = 总度数 + 1 ) —-②</li>
+<li>n<sub>0</sub> = n<sub>2</sub> + 1   —-由①②推出</li>
 </ul>
 </li>
 <li>节点数：<ul>
@@ -515,15 +508,12 @@
 </li>
 <li><p>链式存储</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">treenode</span>&#123;</span></span><br><span class="line">   ELemtype data;</span><br><span class="line">   treenode *rchild, * lchild;</span><br><span class="line">   <span class="comment">//可选头节点</span></span><br><span class="line">   treenode *parent;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">treenode</span> *<span class="title">treenodes</span>;</span></span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 <h4 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h4><p>&emsp;<strong>1-3实现过程：递归</strong></p>
 <ol>
-<li><p>先序遍历：根左右  </p>
-</li>
-<li><p>中序遍历：左根右  </p>
-</li>
+<li>先序遍历：根左右  </li>
+<li>中序遍历：左根右  </li>
 <li><p>后序遍历：左右根  </p>
 </li>
 <li><p>层次遍历:<br>算法思想：<br>①. 初始化一个辅助队列<br>②. 根结点入队<br>③. 若队列非空，则队头结点出队，访问该结点，并将其左、右孩子插入队尾（如果有的话）<br>④. 重复③直至队列为空<br><img src="/images/structure/tree-1.png" alt="alt">  </p>
@@ -538,6 +528,7 @@
 <ol>
 <li>双亲表示法（顺序存储）  </li>
 </ol>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -546,7 +537,8 @@
 <th>parent</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>0</td>
 <td>A</td>
 <td>-1</td>
@@ -571,15 +563,23 @@
 <td>E</td>
 <td>1</td>
 </tr>
-</tbody></table>
-<ol start="2">
+</tbody>
+</table>
+</div>
+<ol>
 <li>孩子表示法（链式+顺序）<br><img src="/images/structure/6-1.png" alt="alt">  </li>
 <li>兄弟表示法（链式存储）  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tnode</span>&#123;</span></span><br><span class="line">   elemtype data; <span class="comment">//数据</span></span><br><span class="line">   tnode *firstchild, *nextbrother; <span class="comment">//指向第一个孩子，和右兄弟</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> tnode *tnodeds;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 <h4 id="树、森林、二叉树的转换"><a href="#树、森林、二叉树的转换" class="headerlink" title="树、森林、二叉树的转换"></a>树、森林、二叉树的转换</h4><p><a href="https://www.cnblogs.com/zhuyf87/archive/2012/11/04/2753950.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhuyf87/archive/2012/11/04/2753950.html</a></p>
-
+<h3 id="哈夫曼数"><a href="#哈夫曼数" class="headerlink" title="哈夫曼数"></a>哈夫曼数</h3><p>给定n个权值分别为w,w2…wn的结点,构造哈夫曼树的算法描述如下</p>
+<ol>
+<li>将这n个结点分别作为n棵仅含一个结点的二叉树,构成森林F</li>
+<li>构造一个新结点,从F中选取两棵根结点权值最小的树作为新结点的左、右子树,并且将新结点的权值置为左、右子树上根结点的权值之和</li>
+<li>从F中删除刚才选出的两棵树,同时将新得到的树加入F中。</li>
+<li>重复步骤2和3,直至F中只剩下一棵树为止</li>
+</ol>
+<h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2>
       
     </div>
     
@@ -757,7 +757,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表"><span class="nav-number">1.</span> <span class="nav-text">线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的概念"><span class="nav-number">1.1.</span> <span class="nav-text">线性表的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的操作"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序表"><span class="nav-number">1.3.</span> <span class="nav-text">顺序表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存储结构"><span class="nav-number">1.3.1.</span> <span class="nav-text">存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">实现方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点"><span class="nav-number">1.3.3.</span> <span class="nav-text">特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">1.4.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链表的概念"><span class="nav-number">1.4.1.</span> <span class="nav-text">链表的概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序表与链表的比较"><span class="nav-number">1.5.</span> <span class="nav-text">顺序表与链表的比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈和队列"><span class="nav-number">2.</span> <span class="nav-text">栈和队列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础概念与基本操作"><span class="nav-number">2.1.</span> <span class="nav-text">基础概念与基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的概念（stack）"><span class="nav-number">2.1.1.</span> <span class="nav-text">栈的概念（stack）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的基本操作"><span class="nav-number">2.1.2.</span> <span class="nav-text">栈的基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的概念（stack）"><span class="nav-number">2.1.3.</span> <span class="nav-text">队列的概念（stack）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的基本操作"><span class="nav-number">2.1.4.</span> <span class="nav-text">队列的基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构与链式存储结构"><span class="nav-number">2.2.</span> <span class="nav-text">顺序存储结构与链式存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的顺序存储结构与链式存储结构"><span class="nav-number">2.2.1.</span> <span class="nav-text">栈的顺序存储结构与链式存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的顺序存储结构与链式存储结构"><span class="nav-number">2.2.2.</span> <span class="nav-text">队列的顺序存储结构与链式存储结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈和队列的应用"><span class="nav-number">2.3.</span> <span class="nav-text">栈和队列的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的应用一——括号匹配"><span class="nav-number">2.3.1.</span> <span class="nav-text">栈的应用一——括号匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的应用二——算式求值"><span class="nav-number">2.3.2.</span> <span class="nav-text">栈的应用二——算式求值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的应用三——递归"><span class="nav-number">2.3.3.</span> <span class="nav-text">栈的应用三——递归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的应用"><span class="nav-number">2.3.4.</span> <span class="nav-text">队列的应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#串"><span class="nav-number">3.</span> <span class="nav-text">串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#串的概率和操作"><span class="nav-number">3.1.</span> <span class="nav-text">串的概率和操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#串的基本概念"><span class="nav-number">3.1.1.</span> <span class="nav-text">串的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#串的基本操作"><span class="nav-number">3.1.2.</span> <span class="nav-text">串的基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#串的匹配"><span class="nav-number">3.2.</span> <span class="nav-text">串的匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#朴素匹配"><span class="nav-number">3.2.1.</span> <span class="nav-text">朴素匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KMP"><span class="nav-number">3.2.2.</span> <span class="nav-text">KMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KMP优化"><span class="nav-number">3.2.3.</span> <span class="nav-text">KMP优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.3.</span> <span class="nav-text">代码：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树"><span class="nav-number">4.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#树-1"><span class="nav-number">4.1.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#树的基本概念"><span class="nav-number">4.1.1.</span> <span class="nav-text">树的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#节点之间的关系"><span class="nav-number">4.1.2.</span> <span class="nav-text">节点之间的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#节点、树的属性"><span class="nav-number">4.1.3.</span> <span class="nav-text">节点、树的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树的性质"><span class="nav-number">4.1.4.</span> <span class="nav-text">树的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树"><span class="nav-number">4.2.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的基本概念"><span class="nav-number">4.2.1.</span> <span class="nav-text">二叉树的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊二叉树"><span class="nav-number">4.2.2.</span> <span class="nav-text">特殊二叉树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">4.2.3.</span> <span class="nav-text">二叉树的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的存储结构"><span class="nav-number">4.2.4.</span> <span class="nav-text">二叉树的存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的遍历"><span class="nav-number">4.2.5.</span> <span class="nav-text">二叉树的遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线索二叉树的基本概念和构造"><span class="nav-number">4.2.6.</span> <span class="nav-text">线索二叉树的基本概念和构造</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树、森林"><span class="nav-number">4.3.</span> <span class="nav-text">树、森林</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#树的存储结构"><span class="nav-number">4.3.1.</span> <span class="nav-text">树的存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树、森林、二叉树的转换"><span class="nav-number">4.3.2.</span> <span class="nav-text">树、森林、二叉树的转换</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表"><span class="nav-number">1.</span> <span class="nav-text">线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的概念"><span class="nav-number">1.1.</span> <span class="nav-text">线性表的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表的操作"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序表"><span class="nav-number">1.3.</span> <span class="nav-text">顺序表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存储结构"><span class="nav-number">1.3.1.</span> <span class="nav-text">存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">实现方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点"><span class="nav-number">1.3.3.</span> <span class="nav-text">特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">1.4.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链表的概念"><span class="nav-number">1.4.1.</span> <span class="nav-text">链表的概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序表与链表的比较"><span class="nav-number">1.5.</span> <span class="nav-text">顺序表与链表的比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈和队列"><span class="nav-number">2.</span> <span class="nav-text">栈和队列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础概念与基本操作"><span class="nav-number">2.1.</span> <span class="nav-text">基础概念与基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的概念（stack）"><span class="nav-number">2.1.1.</span> <span class="nav-text">栈的概念（stack）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的基本操作"><span class="nav-number">2.1.2.</span> <span class="nav-text">栈的基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的概念（stack）"><span class="nav-number">2.1.3.</span> <span class="nav-text">队列的概念（stack）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的基本操作"><span class="nav-number">2.1.4.</span> <span class="nav-text">队列的基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构与链式存储结构"><span class="nav-number">2.2.</span> <span class="nav-text">顺序存储结构与链式存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的顺序存储结构与链式存储结构"><span class="nav-number">2.2.1.</span> <span class="nav-text">栈的顺序存储结构与链式存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的顺序存储结构与链式存储结构"><span class="nav-number">2.2.2.</span> <span class="nav-text">队列的顺序存储结构与链式存储结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈和队列的应用"><span class="nav-number">2.3.</span> <span class="nav-text">栈和队列的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的应用一——括号匹配"><span class="nav-number">2.3.1.</span> <span class="nav-text">栈的应用一——括号匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的应用二——算式求值"><span class="nav-number">2.3.2.</span> <span class="nav-text">栈的应用二——算式求值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的应用三——递归"><span class="nav-number">2.3.3.</span> <span class="nav-text">栈的应用三——递归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列的应用"><span class="nav-number">2.3.4.</span> <span class="nav-text">队列的应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#串"><span class="nav-number">3.</span> <span class="nav-text">串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#串的概率和操作"><span class="nav-number">3.1.</span> <span class="nav-text">串的概率和操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#串的基本概念"><span class="nav-number">3.1.1.</span> <span class="nav-text">串的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#串的基本操作"><span class="nav-number">3.1.2.</span> <span class="nav-text">串的基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#串的匹配"><span class="nav-number">3.2.</span> <span class="nav-text">串的匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#朴素匹配"><span class="nav-number">3.2.1.</span> <span class="nav-text">朴素匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KMP"><span class="nav-number">3.2.2.</span> <span class="nav-text">KMP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KMP优化"><span class="nav-number">3.2.3.</span> <span class="nav-text">KMP优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">3.3.</span> <span class="nav-text">代码：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树"><span class="nav-number">4.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#树-1"><span class="nav-number">4.1.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#树的基本概念"><span class="nav-number">4.1.1.</span> <span class="nav-text">树的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#节点之间的关系"><span class="nav-number">4.1.2.</span> <span class="nav-text">节点之间的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#节点、树的属性"><span class="nav-number">4.1.3.</span> <span class="nav-text">节点、树的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树的性质"><span class="nav-number">4.1.4.</span> <span class="nav-text">树的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树"><span class="nav-number">4.2.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的基本概念"><span class="nav-number">4.2.1.</span> <span class="nav-text">二叉树的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊二叉树"><span class="nav-number">4.2.2.</span> <span class="nav-text">特殊二叉树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">4.2.3.</span> <span class="nav-text">二叉树的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的存储结构"><span class="nav-number">4.2.4.</span> <span class="nav-text">二叉树的存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的遍历"><span class="nav-number">4.2.5.</span> <span class="nav-text">二叉树的遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线索二叉树的基本概念和构造"><span class="nav-number">4.2.6.</span> <span class="nav-text">线索二叉树的基本概念和构造</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树、森林"><span class="nav-number">4.3.</span> <span class="nav-text">树、森林</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#树的存储结构"><span class="nav-number">4.3.1.</span> <span class="nav-text">树的存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树、森林、二叉树的转换"><span class="nav-number">4.3.2.</span> <span class="nav-text">树、森林、二叉树的转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哈夫曼数"><span class="nav-number">4.4.</span> <span class="nav-text">哈夫曼数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">5.</span> <span class="nav-text">图</span></a></li></ol></div>
             
 
           </div>
