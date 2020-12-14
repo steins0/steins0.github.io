@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://yoursite.com/images/structure/9-5.png">
 <meta property="og:image" content="http://yoursite.com/images/structure/9-5.png">
 <meta property="article:published_time" content="2020-11-12T10:00:28.000Z">
-<meta property="article:modified_time" content="2020-12-14T10:57:42.896Z">
+<meta property="article:modified_time" content="2020-12-14T10:59:48.559Z">
 <meta property="article:author" content="Steins.lei">
 <meta property="article:tag" content="833">
 <meta name="twitter:card" content="summary">
@@ -704,16 +704,17 @@
 <ol>
 <li>顺序查找</li>
 <li>折半查找（二分查找）：要求待查找的表必须是按关键字大小有序排列的顺序表。  <ul>
-<li>$ASL_{折半查找} = [\log_2n]+1$  </li>
-<li><img src="/images/structure/9-1.PNG" alt="alt">  </li>
+<li>$ASL_{折半查找} = [\log_2n]+1$<br><img src="/images/structure/9-1.PNG" alt="alt">  </li>
 </ul>
 </li>
 <li>索引查找（分块查找）：索引表是一个递增有序表。<ul>
 <li>性能介于顺序查找和折半查找之间的查找方法。</li>
-<li>$ASL_{索引} = L_B+L_W(L_B为索引表序列、L_W块内序列)$<h3 id="动态查找表——基于树表的查找法"><a href="#动态查找表——基于树表的查找法" class="headerlink" title="动态查找表——基于树表的查找法"></a>动态查找表——基于树表的查找法</h3></li>
+<li>$ASL_{索引} = L_B+L_W(L_B为索引表序列、L_W块内序列)$</li>
 </ul>
 </li>
 </ol>
+</blockquote>
+<h3 id="动态查找表——基于树表的查找法"><a href="#动态查找表——基于树表的查找法" class="headerlink" title="动态查找表——基于树表的查找法"></a>动态查找表——基于树表的查找法</h3><blockquote>
 <p>概念：表结构本身在查找过程中动态生成，即对于给定值key，若表中存在关键字等于key的记录，则查找成功，否则插入关键字等于key的记录。</p>
 <ol>
 <li>二叉排序树BST (Binary Sort Tree)<ul>
@@ -722,8 +723,7 @@
 </ul>
 </li>
 <li>平衡二叉树(AVL)<ul>
-<li>平衡因子BF(Balance Factor) ：二叉树中每个结点的平衡因子是该结点左子树的高度减去右子树的高度。</li>
-<li><img src="/images/structure/9-2.PNG" alt="alt"></li>
+<li>平衡因子BF(Balance Factor) ：二叉树中每个结点的平衡因子是该结点左子树的高度减去右子树的高度。<br><img src="/images/structure/9-2.PNG" alt="alt"></li>
 <li>左旋和右旋</li>
 <li><a href="https://blog.csdn.net/isunbin/article/details/81707606" target="_blank" rel="noopener">https://blog.csdn.net/isunbin/article/details/81707606</a></li>
 </ul>
