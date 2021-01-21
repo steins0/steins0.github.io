@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="编译原理," />
+  <meta name="keywords" content="����ԭ��," />
 
 
 
@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="词法分析1 概述1.1相关问题1.1.1单词的基本分类： 关键字（保留字或者基本字）：它们是字母的固定串 在程序设计语言中有固定的意义，不再允许用户定义它们表示其他意义。例如if whlie for int等等 标识符：由用户自己定义的一个字符串，通常是由一个字母开头的数字与字母组合，用于命令程序中的变量。 字变量:直接写出的数据，3.14，true，’abc’等 运算符：+ - * &#x2F; 等等 分">
+<meta name="description" content="�ʷ�����1 ����1.1�������1.1.1���ʵĻ������ࣺ �ؼ��֣������ֻ��߻����֣�����������ĸ�Ĺ̶��� �ڳ�������������й̶������壬���������û��������Ǳ�ʾ�������塣����if whlie for int�ȵ� ��ʶ�������û��Լ������һ���ַ�����ͨ������һ����ĸ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编译原理复习总结（2）">
+<meta property="og:title" content="����ԭ����ϰ�ܽᣨ2��">
 <meta property="og:url" content="http://yoursite.com/2020/07/13/pl-2/pl-2/index.html">
 <meta property="og:site_name" content="steins">
-<meta property="og:description" content="词法分析1 概述1.1相关问题1.1.1单词的基本分类： 关键字（保留字或者基本字）：它们是字母的固定串 在程序设计语言中有固定的意义，不再允许用户定义它们表示其他意义。例如if whlie for int等等 标识符：由用户自己定义的一个字符串，通常是由一个字母开头的数字与字母组合，用于命令程序中的变量。 字变量:直接写出的数据，3.14，true，’abc’等 运算符：+ - * &#x2F; 等等 分">
+<meta property="og:description" content="�ʷ�����1 ����1.1�������1.1.1���ʵĻ������ࣺ �ؼ��֣������ֻ��߻����֣�����������ĸ�Ĺ̶��� �ڳ�������������й̶������壬���������û��������Ǳ�ʾ�������塣����if whlie for int�ȵ� ��ʶ�������û��Լ������һ���ַ�����ͨ������һ����ĸ">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-7.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-8.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-9.png">
@@ -97,9 +97,9 @@
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-16.png">
 <meta property="og:image" content="http://yoursite.com/images/pl/pl-17.png">
 <meta property="article:published_time" content="2020-07-13T06:33:14.000Z">
-<meta property="article:modified_time" content="2020-08-24T03:33:56.308Z">
+<meta property="article:modified_time" content="2021-01-21T07:03:38.627Z">
 <meta property="article:author" content="Steins.lei">
-<meta property="article:tag" content="编译原理">
+<meta property="article:tag" content="����ԭ��">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/pl/pl-7.png">
 
@@ -137,7 +137,7 @@
 
 
 
-  <title>编译原理复习总结（2） | steins</title>
+  <title>����ԭ����ϰ�ܽᣨ2�� | steins</title>
   
 
 
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">编译原理复习总结（2）</h1>
+          <h1 class="post-title" itemprop="name headline">����ԭ����ϰ�ܽᣨ2��</h1>
         
 
         <div class="post-meta">
@@ -353,121 +353,134 @@
       
 
       
-        <h1 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><h3 id="1-1相关问题"><a href="#1-1相关问题" class="headerlink" title="1.1相关问题"></a>1.1相关问题</h3><h4 id="1-1-1单词的基本分类："><a href="#1-1-1单词的基本分类：" class="headerlink" title="1.1.1单词的基本分类："></a>1.1.1单词的基本分类：</h4><ul>
-<li>关键字（保留字或者基本字）：它们是字母的固定串 在程序设计语言中有固定的意义，不再允许用户定义它们表示其他意义。例如if whlie for int等等</li>
-<li>标识符：由用户自己定义的一个字符串，通常是由一个字母开头的数字与字母组合，用于命令程序中的变量。</li>
-<li>字变量:直接写出的数据，3.14，true，’abc’等</li>
-<li>运算符：+ - * / 等等</li>
-<li>分隔符：分号，冒号等</li>
+        <h1 id="�ʷ�����"><a href="#�ʷ�����" class="headerlink" title="�ʷ�����"></a>�ʷ�����</h1><h2 id="1-����"><a href="#1-����" class="headerlink" title="1 ����"></a>1 ����</h2><h3 id="1-1�������"><a href="#1-1�������" class="headerlink" title="1.1�������"></a>1.1�������</h3><h4 id="1-1-1���ʵL������ࣺ"><a href="#1-1-1���ʵL������ࣺ" class="headerlink" title="1.1.1���ʵĻ������ࣺ"></a>1.1.1���ʵĻ������ࣺ</h4><ul>
+<li>�ؼ��֣������ֻ��߻����֣�����������ĸ�Ĺ̶��� �ڳ�������������й̶������壬���������û��������Ǳ�ʾ�������塣����if whlie for int�ȵ�</li>
+<li>��ʶ�������û��Լ������һ���ַ�����ͨ������һ����ĸ��ͷ����������ĸ��ϣ�������������еı�����</li>
+<li>�ֱ���:ֱ��д�������ݣ�3.14��true��’abc’��</li>
+<li>�������+ - * / �ȵ�</li>
+<li>�ָ������ֺţ�ð�ŵ�</li>
 </ul>
-<h4 id="1-1-2术语："><a href="#1-1-2术语：" class="headerlink" title="1.1.2术语："></a>1.1.2术语：</h4><ul>
-<li>模式（patten）：产生和识别元素的规则 </li>
-<li>记号（token）：按照某个模式（或规则）识别出的元素（一组） </li>
-<li>单词（lexeme）：被识别出的元素自身的值（一个），也称为词值  </li>
+<h4 id="1-1-2���"><a href="#1-1-2���" class="headerlink" title="1.1.2���"></a>1.1.2���</h4><ul>
+<li>ģʽ��patten����������ʶ��Ԫ�صĹ��� </li>
+<li>�Ǻţ�token��������ĳ��ģʽ�������ʶ�����Ԫ�أ�һ�飩 </li>
+<li>���ʣ�lexeme������ʶ�����Ԫ��������ֵ��һ������Ҳ��Ϊ��ֵ  </li>
 </ul>
-<h3 id="1-2词法分析器的功能和与工作方式"><a href="#1-2词法分析器的功能和与工作方式" class="headerlink" title="1.2词法分析器的功能和与工作方式"></a>1.2词法分析器的功能和与工作方式</h3><h4 id="1-2-1词法分析器的功能："><a href="#1-2-1词法分析器的功能：" class="headerlink" title="1.2.1词法分析器的功能："></a>1.2.1词法分析器的功能：</h4><p>&emsp;&emsp;依次扫描源程序中的各个字符，逐个识别出单词，并转换为内部编码形式的记号流作为输出。<br>&emsp;&emsp;任务：</p>
+<h3 id="1-2�ʷ��������L��ܺ��빤����ʽ"><a href="#1-2�ʷ��������L��ܺ��빤����ʽ" class="headerlink" title="1.2�ʷ��������Ĺ��ܺ��빤����ʽ"></a>1.2�ʷ��������Ĺ��ܺ��빤����ʽ</h3><h4 id="1-2-1�ʷ��������L��ܣ�"><a href="#1-2-1�ʷ��������L��ܣ�" class="headerlink" title="1.2.1�ʷ��������Ĺ��ܣ�"></a>1.2.1�ʷ��������Ĺ��ܣ�</h4><p>&emsp;&emsp;����ɨ��Դ�����еĸ����ַ������ʶ������ʣ���ת��Ϊ�ڲ�������ʽ�ļǺ�����Ϊ�����<br>&emsp;&emsp;����</p>
 <ul>
-<li>滤掉源程序中的无用成分，如注释、空格、回车等</li>
-<li>识别出源程序中的各个单词符号，并将其转换为内部编码形式</li>
-<li>处理与具体平台有关的输入（如文件结束符的不同表示等）</li>
-<li>识别记号，并交给语法分析器。根据模式识别记号</li>
-<li>调用符号表管理器或出错处理器，进行相关处理   </li>
+<li>�˵�Դ�����е����óɷ֣���ע�͡��ո񡢻س���</li>
+<li>ʶ���Դ�����еĸ������ʷ��ţ�������ת��Ϊ�ڲ�������ʽ</li>
+<li>���������ƽ̨�йص����루���ļ��������Ĳ�ͬ��ʾ�ȣ�</li>
+<li>ʶ��Ǻţ��������﷨������������ģʽʶ��Ǻ�</li>
+<li>���÷��ű��������������������������ش���   </li>
 </ul>
-<h4 id="1-2-2-工作方式"><a href="#1-2-2-工作方式" class="headerlink" title="1.2.2 工作方式"></a>1.2.2 工作方式</h4><ul>
-<li>词法分析器作为编译器独立执行任务，即单独进行一遍扫描。它以源程序为输入，以记号流为输出。<br><img src="/images/pl/pl-7.png" alt="alt"><br>&emsp;&emsp;这种工作方式优点有：首先是设计简单；其次是改进编译效率；另外，增强了编译系统的可移植性。其缺点就是由于词法分析输出的是记号流，这将占用较大的存储空间。  </li>
-<li>词法分析器作为语法分析器的子程序执行任务，即每当语法分析器需要一个记号时，就调用词法分析器，并得到一个识别出的记号。<br><img src="/images/pl/pl-8.png" alt="alt"><br>&emsp;&emsp;在这种工作方式下可以使用高级语言,因为高级语言的特性，这种工作方式最常采用，也最容易实现。  </li>
-<li>词法分析器与语法分析器并行工作的方式。<br><img src="/images/pl/pl-9.png" alt="alt"><br>&emsp;&emsp;这种方式下，为了提高编译效率，可以通过使用队列，使得词法分析器和语法分析器以生产/消费的形式并行工作。  </li>
+<h4 id="1-2-2-������ʽ"><a href="#1-2-2-������ʽ" class="headerlink" title="1.2.2 ������ʽ"></a>1.2.2 ������ʽ</h4><ul>
+<li>�ʷ���������Ϊ����������ִ�����񣬼���������һ��ɨ�衣����Դ����Ϊ���룬�ԼǺ���Ϊ�����<br><img src="/images/pl/pl-7.png" alt="alt"><br>&emsp;&emsp;���ֹ�����ʽ�ŵ��У���������Ƽ򵥣�����ǸĽ�����Ч�ʣ����⣬��ǿ�˱���ϵͳ�Ŀ���ֲ�ԡ���ȱ��������ڴʷ�����������ǼǺ������⽫ռ�ýϴ�Ĵ洢�ռ䡣  </li>
+<li>�ʷ���������Ϊ�﷨���������ӳ���ִ�����񣬼�ÿ���﷨��������Ҫһ���Ǻ�ʱ���͵��ôʷ������������õ�һ��ʶ����ļǺš�<br><img src="/images/pl/pl-8.png" alt="alt"><br>&emsp;&emsp;�����ֹ�����ʽ�¿���ʹ�ø߼�����,��Ϊ�߼����Ե����ԣ����ֹ�����ʽ����ã�Ҳ������ʵ�֡�  </li>
+<li>�ʷ����������﷨���������й����ķ�ʽ��<br><img src="/images/pl/pl-9.png" alt="alt"><br>&emsp;&emsp;���ַ�ʽ�£�Ϊ����߱���Ч�ʣ�����ͨ��ʹ�ö��У�ʹ�ôʷ����������﷨������������/���ѵ���ʽ���й�����  </li>
 </ul>
-<h3 id="1-3-源程序的输入和预处理"><a href="#1-3-源程序的输入和预处理" class="headerlink" title="1.3 源程序的输入和预处理"></a>1.3 源程序的输入和预处理</h3><h4 id="1-3-1源程序的输入。"><a href="#1-3-1源程序的输入。" class="headerlink" title="1.3.1源程序的输入。"></a>1.3.1源程序的输入。</h4><p>&emsp;&emsp;词法分析器的任务是从左到右逐个字符地读入源程序，对构成源程序的字符流进行扫描和分解，从而识别出一个个单词（也称单词符号或符号），把作为字符串的源程序改造成为单词符号串的中间程序  </p>
-<h4 id="1-3-2预处理"><a href="#1-3-2预处理" class="headerlink" title="1.3.2预处理"></a>1.3.2预处理</h4><p>&emsp;&emsp;预处理就是去除注释、无用的空白、跳格、回车、换行符等处理。构造一个预处理子程序，完成去除注释、无用的空白、跳格、回车、换行符等处理的任务后，将其装入词法分析器的扫描缓冲区。</p>
-<h2 id="2-模式的形式化描述"><a href="#2-模式的形式化描述" class="headerlink" title="2 模式的形式化描述"></a>2 模式的形式化描述</h2><h3 id="2-1-语言"><a href="#2-1-语言" class="headerlink" title="2.1 语言"></a>2.1 语言</h3><h4 id="2-1-1定义-乔姆斯基（Chomsky）"><a href="#2-1-1定义-乔姆斯基（Chomsky）" class="headerlink" title="2.1.1定义(乔姆斯基（Chomsky）):"></a>2.1.1定义(乔姆斯基（Chomsky）):</h4><p>语言L是有限字母表∑上有限长度字符串的集合  </p>
+<h3 id="1-3-Դ����������Ԥ����"><a href="#1-3-Դ����������Ԥ����" class="headerlink" title="1.3 Դ����������Ԥ����"></a>1.3 Դ����������Ԥ����</h3><h4 id="1-3-1Դ��������롣"><a href="#1-3-1Դ��������롣" class="headerlink" title="1.3.1Դ��������롣"></a>1.3.1Դ��������롣</h4><p>&emsp;&emsp;�ʷ��������������Ǵ���������ַ��ض���Դ���򣬶Թ���Դ������ַ�������ɨ��ͷֽ⣬�Ӷ�ʶ���һ�������ʣ�Ҳ�Ƶ��ʷ��Ż���ţ�������Ϊ�ַ�����Դ��������Ϊ���ʷ��Ŵ����м����  </p>
+<h4 id="1-3-2Ԥ����"><a href="#1-3-2Ԥ����" class="headerlink" title="1.3.2Ԥ����"></a>1.3.2Ԥ����</h4><p>&emsp;&emsp;Ԥ��������ȥ��ע�͡����õĿհס����񡢻س������з��ȴ���������һ��Ԥ�����ӳ������ȥ��ע�͡����õĿհס����񡢻س������з��ȴ���������󣬽���װ��ʷ���������ɨ�軺������</p>
+<h2 id="2-gʽ����ʽ������"><a href="#2-gʽ����ʽ������" class="headerlink" title="2 ģʽ����ʽ������"></a>2 ģʽ����ʽ������</h2><h3 id="2-1-����"><a href="#2-1-����" class="headerlink" title="2.1 ����"></a>2.1 ����</h3><h4 id="2-1-1����-��k˹����Chomsky��"><a href="#2-1-1����-��k˹����Chomsky��" class="headerlink" title="2.1.1����(��ķ˹����Chomsky��):"></a>2.1.1����(��ķ˹����Chomsky��):</h4><p>����L��������ĸ���������޳����ַ����ļ���  </p>
 <ul>
-<li>字母表是组成字符串的所有字符的集合。换句话说，字符串中的所有字符取自字母表。  </li>
+<li>��ĸ��������ַ����������ַ��ļ��ϡ����仰˵���ַ����е������ַ�ȡ����ĸ����  </li>
 </ul>
-<p>定义中强调两个有限，因为计算机的表示能力有限 ：  </p>
+<p>������ǿ���������ޣ���Ϊ������ı�ʾ�������� ��  </p>
 <ul>
-<li>字母表是有限的，即字母表中元素是有限多个；</li>
-<li>字符串的长度是有限的，即字符串中字符个数是有限多个。<br>例：ASCII字符集。。  <h4 id="2-1-2"><a href="#2-1-2" class="headerlink" title="2.1.2"></a>2.1.2</h4>设X为一个字符串  </li>
-<li><em>前缀*</em>：移走 x 的尾部的零个或多于零个符号之后余下的部分。  </li>
-<li><em>后缀*</em>：删去 x 的头部的零个或多于零个符号之后余下的部分。  </li>
-<li><em>子串*</em>: 从 x 中删去一个前缀和一个后缀之后余下的部分。<br>例: x = steins<br>前缀： 空串，s,st,ste,stei,stein,steins<br>后缀： steins,teins,eins,ins,ns,s,空串<br>子串：steins,stein,teins,…,空串<br>当且仅当 x 的前缀不是 x 本身时，则称其为 x 的<strong>真前缀</strong>，同理，当且仅当 x 的后缀不是 x 本身时，则称其为 x的<strong>真后缀</strong>。</li>
+<li>��ĸ�������޵ģ�����ĸ����Ԫ�������޶����</li>
+<li>�ַ����ĳ��������޵ģ����ַ������ַ����������޶����<br>����ASCII�ַ�������  <h4 id="2-1-2"><a href="#2-1-2" class="headerlink" title="2.1.2"></a>2.1.2</h4>��XΪһ���ַ���<br><strong>ǰ׺</strong>������ x ��β�������������������֮�����µĲ��֡�<br><strong>��׺</strong>��ɾȥ x ��ͷ�������������������֮�����µĲ��֡�<br><strong>�Ӵ�</strong>: �� x ��ɾȥһ��ǰ׺��һ����׺֮�����µĲ��֡�<br>��: x = steins<br>ǰ׺�� �մ���s,st,ste,stei,stein,steins<br>��׺�� steins,teins,eins,ins,ns,s,�մ�<br>�Ӵ���steins,stein,teins,…,�մ�<br>���ҽ��� x ��ǰ׺���� x ����ʱ�������Ϊ x ��<strong>��ǰ׺</strong>��ͬ�������ҽ��� x �ĺ�׺���� x ����ʱ�������Ϊ x��<strong>���׺</strong>��</li>
 </ul>
-<p>子序列：  </p>
-<h4 id="2-1-3字符串的运算："><a href="#2-1-3字符串的运算：" class="headerlink" title="2.1.3字符串的运算："></a>2.1.3字符串的运算：</h4><p>交<br>并<br>方幂<br>星闭包<br>正闭包  </p>
-<h3 id="2-2正规式和正规集"><a href="#2-2正规式和正规集" class="headerlink" title="2.2正规式和正规集"></a>2.2正规式和正规集</h3><h4 id="2-2-1-四类文法（略过"><a href="#2-2-1-四类文法（略过" class="headerlink" title="2.2.1 四类文法（略过"></a>2.2.1 四类文法（略过</h4><h4 id="2-2-2-正规式"><a href="#2-2-2-正规式" class="headerlink" title="2.2.2 正规式"></a>2.2.2 正规式</h4><p>&emsp;<strong>定义</strong>：<br>令Σ是一个有限字母表，则Σ上的正规式及其表示的集合递归定义如下:<br>    1. ε是正规式，它表示集合L(ε)={ε}<br>    2. 若a是Σ上的字符，则a是正规式，它表示集合L(a)={a}<br>    3. 若正规式e1和e2分别表示集合L(e1)和L(e2)，则<br>       （a） e1|e2是正规式，表示集合L(e1)∪L(e2)，<br>       （b） e1e2是正规式，表示集合L(e1)L(e2)，<br>       （c） e1* 是正规式，表示集合(L(e1))*，<br>       （d）(e1)是正规式，表示的集合仍然是L(e1)。（加括弧改变优先级、结合性）<br>    可用正规式描述的语言称为正规语言或正规集。              </p>
-<h4 id="2-2-3-运算的优先级与结合性："><a href="#2-2-3-运算的优先级与结合性：" class="headerlink" title="2.2.3 运算的优先级与结合性："></a>2.2.3 运算的优先级与结合性：</h4><p>若正规式的优先级和结合性做下述约定:  </p>
+<p>�����У�  </p>
+<h4 id="2-1-3�ַ��������㣺"><a href="#2-1-3�ַ��������㣺" class="headerlink" title="2.1.3�ַ��������㣺"></a>2.1.3�ַ��������㣺</h4><p>��<br>��<br>����<br>�Ǳհ�<br>���հ�  </p>
+<h3 id="2-2����ʽ�����漯"><a href="#2-2����ʽ�����漯" class="headerlink" title="2.2����ʽ�����漯"></a>2.2����ʽ�����漯</h3><h4 id="2-2-1-�����k����Թ�"><a href="#2-2-1-�����k����Թ�" class="headerlink" title="2.2.1 �����ķ����Թ�"></a>2.2.1 �����ķ����Թ�</h4><h4 id="2-2-2-����ʽ"><a href="#2-2-2-����ʽ" class="headerlink" title="2.2.2 ����ʽ"></a>2.2.2 ����ʽ</h4><p>&emsp;<strong>����</strong>��<br>���һ��������ĸ�������ϵ�����ʽ�����ʾ�ļ��ϵݹ鶨������:  </p>
+<pre><code>1. ��������ʽ������ʾ����L(��)={��}  
+2. ��a�Ǧ��ϵ��ַ�����a������ʽ������ʾ����L(a)={a}  
+3. ������ʽe1��e2�ֱ��ʾ����L(e1)��L(e2)����  
+   ��a�� e1|e2������ʽ����ʾ����L(e1)��L(e2)��  
+   ��b�� e1e2������ʽ����ʾ����L(e1)L(e2)��  
+   ��c�� e1* ������ʽ����ʾ����(L(e1))*��  
+   ��d��(e1)������ʽ����ʾ�ļ�����Ȼ��L(e1)�����������ı����ȼ�������ԣ�  
+��������ʽ���������Գ�Ϊ�������Ի����漯��              
+</code></pre><h4 id="2-2-3-��������c������ԣ�"><a href="#2-2-3-��������c������ԣ�" class="headerlink" title="2.2.3 ��������ȼ������ԣ�"></a>2.2.3 ��������ȼ������ԣ�</h4><p>������ʽ�����ȼ��ͽ����������Լ��:  </p>
 <ol>
-<li>三种运算均具有左结合性质；  </li>
-<li>优先级从高到低顺序排列为:闭包运算、连接运算、或运算。<br>即正规式中不必要的括号可以被省略。<br>例如，(a)|(((b)*)(c))可以简化成a|b*c。  </li>
+<li>��������������������ʣ�  </li>
+<li>���ȼ��Ӹߵ���˳������Ϊ:�հ����㡢�������㡢�����㡣<br>������ʽ�в���Ҫ�����ſ��Ա�ʡ�ԡ�<br>���磬(a)|(((b)*)(c))���Լ򻯳�a|b*c��  </li>
 </ol>
-<p>&emsp;<strong>定义</strong>:<br>若正规式P和Q表示了同一个正规集，则称P和Q是等价的，记为P=Q。    </p>
-<h4 id="2-2-4-正规式的代数性质："><a href="#2-2-4-正规式的代数性质：" class="headerlink" title="2.2.4 正规式的代数性质："></a>2.2.4 正规式的代数性质：</h4><p><img src="/images/pl/pl-10.png" alt="alt"></p>
-<h4 id="2-2-5-正规式的简化"><a href="#2-2-5-正规式的简化" class="headerlink" title="2.2.5 正规式的简化"></a>2.2.5 正规式的简化</h4><p>(a) 正闭包：<br>若r是表示L(r)的正规式，则r+是表示(L(r))+的正规式，且下述等式成立:<br>r<sup>+</sup> = rr* = r*r，r* = r+|ε<br><sup>+</sup>与<em>具有相同的运算结合性和优先级<br>例如： (0|1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)\</em><br>可以化简为：(0|1|2|3|4|5|6|7|8|9)<sup>+</sup>  </p>
-<p>(b) 可缺省<br>若r是正规式，则r?是表示L(r)∪{ε}的正规式，且下述等式成立:<br>r?=r|ε<br>?也可以与*具有相同的运算结合性和优先级<br>注意：引入算符？的主要目的是为了回避不可以直接通过键盘输入的字符ε。<br>例如： E(+|-|ε)    可以改写为：E(+|-)?  </p>
-<p>(c) 字符组<br>若r是仅由|运算构成的正规式，则可改写为[r’]，其中r’可以有如下两种形式：<br>枚举:如[abc]，它等价于：a|b|c<br>分段:如[0-9a-z]<br>它等价于:[0123456789abcdefghijklmnopqrstuvwxyz]  </p>
-<p>(d) 非字符组<br>若[r]是一个字符组形式的正规式，则[^r]是表示∑- L(r)的正规式。<br>例如：若 ∑={a, b, c, d, e, f, g}，<br>&emsp;&emsp;&emsp;则 L([^abc]) = { d, e, f, g }</p>
-<h2 id="3-有限自动机"><a href="#3-有限自动机" class="headerlink" title="3 有限自动机"></a>3 有限自动机</h2><h3 id="3-1-状态转换图"><a href="#3-1-状态转换图" class="headerlink" title="3.1 状态转换图"></a>3.1 状态转换图</h3><h4 id="3-1-1定义"><a href="#3-1-1定义" class="headerlink" title="3.1.1定义"></a>3.1.1定义</h4><blockquote>
-<p>有限自动机(FA)是识别正规集的一种数学模型，是设计和实现扫描器的有效工具。状态转换图是有限自动机的直观图示。<br>状态转换图是由一组矢量线连接的有限个节点所组成的有向图。每个<strong>结点</strong>均代表识别单词时词法分析器所处的<strong>状态</strong>，用圆圈表示，在圆圈中标记状态的名字或者编号。其中有一个<strong>初始状态</strong>和多个<strong>终态</strong>，为了显示终态与其他状态的区别，通常用双圆圈表示终态。  </p>
+<p>&emsp;<strong>����</strong>:<br>������ʽP��Q��ʾ��ͬһ�����漯�����P��Q�ǵȼ۵ģ���ΪP=Q��    </p>
+<h4 id="2-2-4-����ʽ�J������ʣ�"><a href="#2-2-4-����ʽ�J������ʣ�" class="headerlink" title="2.2.4 ����ʽ�Ĵ������ʣ�"></a>2.2.4 ����ʽ�Ĵ������ʣ�</h4><p><img src="/images/pl/pl-10.png" alt="alt"></p>
+<h4 id="2-2-5-����ʽ�l�"><a href="#2-2-5-����ʽ�l�" class="headerlink" title="2.2.5 ����ʽ�ļ�"></a>2.2.5 ����ʽ�ļ�</h4><p>(a) ���հ���<br>��r�Ǳ�ʾL(r)������ʽ����r+�Ǳ�ʾ(L(r))+������ʽ����������ʽ����:<br>r<sup>+</sup> = rr* = r*r��r* = r+|��<br><sup>+</sup>��<em>������ͬ���������Ժ����ȼ�<br>���磺 (0|1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)\</em><br>���Ի���Ϊ��(0|1|2|3|4|5|6|7|8|9)<sup>+</sup>  </p>
+<p>(b) ��ȱʡ<br>��r������ʽ����r?�Ǳ�ʾL(r)��{��}������ʽ����������ʽ����:<br>r?=r|��<br>?Ҳ������*������ͬ���������Ժ����ȼ�<br>ע�⣺�������������ҪĿ����Ϊ�˻رܲ�����ֱ��ͨ������������ַ��š�<br>���磺 E(+|-|��)    ���Ը�дΪ��E(+|-)?  </p>
+<p>(c) �ַ���<br>��r�ǽ���|���㹹�ɵ�����ʽ����ɸ�дΪ[r’]������r’����������������ʽ��<br>ö��:��[abc]�����ȼ��ڣ�a|b|c<br>�ֶ�:��[0-9a-z]<br>���ȼ���:[0123456789abcdefghijklmnopqrstuvwxyz]  </p>
+<p>(d) ���ַ���<br>��[r]��һ���ַ�����ʽ������ʽ����<sup><a href="#fn_r" id="reffn_r">r</a></sup>�Ǳ�ʾ��- L(r)������ʽ��<br>���磺�� ��={a, b, c, d, e, f, g}��<br>&emsp;&emsp;&emsp;�� L(<sup><a href="#fn_abc" id="reffn_abc">abc</a></sup>) = { d, e, f, g }</p>
+<h2 id="3-�����Զ���"><a href="#3-�����Զ���" class="headerlink" title="3 �����Զ���"></a>3 �����Զ���</h2><h3 id="3-1-״̬ת��ͼ"><a href="#3-1-״̬ת��ͼ" class="headerlink" title="3.1 ״̬ת��ͼ"></a>3.1 ״̬ת��ͼ</h3><h4 id="3-1-1����"><a href="#3-1-1����" class="headerlink" title="3.1.1����"></a>3.1.1����</h4><blockquote>
+<p>�����Զ���(FA)��ʶ�����漯��һ����ѧģ�ͣ�����ƺ�ʵ��ɨ��������Ч���ߡ�״̬ת��ͼ�������Զ�����ֱ��ͼʾ��<br>״̬ת��ͼ����һ��ʸ�������ӵ����޸��ڵ�����ɵ�����ͼ��ÿ��<strong>���</strong>������ʶ�𵥴�ʱ�ʷ�������������<strong>״̬</strong>����ԲȦ��ʾ����ԲȦ�б��״̬�����ֻ��߱�š�������һ��<strong>��ʼ״̬</strong>�Ͷ��<strong>��̬</strong>��Ϊ����ʾ��̬������״̬������ͨ����˫ԲȦ��ʾ��̬��  </p>
 </blockquote>
-<p>转换图：  </p>
+<p>ת��ͼ��  </p>
 <blockquote>
-<p>如果输入串是“&lt;=”，那么控制从开始状态 0 到达接受状态 2，读出<br>词法单元 &lt;=，执行动作 return(relation, LE)。<br><img src="/images/pl/pl-11.png" alt="alt">  </p>
+<p>������봮�ǡ�&lt;=������ô���ƴӿ�ʼ״̬ 0 �������״̬ 2������<br>�ʷ���Ԫ &lt;=��ִ�ж��� return(relation, LE)��<br><img src="/images/pl/pl-11.png" alt="alt">  </p>
 </blockquote>
-<h3 id="3-2-不确定的有限自动机（NFA）"><a href="#3-2-不确定的有限自动机（NFA）" class="headerlink" title="3.2 不确定的有限自动机（NFA）"></a>3.2 不确定的有限自动机（NFA）</h3><blockquote>
-<p>NFA是一个五元组（5-tuple）：<br>M =（S，∑，move，s0，F），其中<br>（1） S是有限个状态（state）的集合；<br>（2）∑是有限个输入字符（包括ε）的集合；<br>（3） move是一个状态转移函数，move(si，ch)=sj表示，当前状态si下若遇到输入字符ch，则转移到状态sj；<br>（4） s0是唯一的初态（也称开始状态）；<br>（5） F是终态集（也称接受状态集），它是S的子集，包含了所有的终态。  </p>
+<h3 id="3-2-��ȷ���������Զ�����NFA��"><a href="#3-2-��ȷ���������Զ�����NFA��" class="headerlink" title="3.2 ��ȷ���������Զ�����NFA��"></a>3.2 ��ȷ���������Զ�����NFA��</h3><blockquote>
+<p>NFA��һ����Ԫ�飨5-tuple����<br>M =��S���ƣ�move��s0��F��������<br>��1�� S�����޸�״̬��state���ļ��ϣ�<br>��2���������޸������ַ��������ţ��ļ��ϣ�<br>��3�� move��һ��״̬ת�ƺ�����move(si��ch)=sj��ʾ����ǰ״̬si�������������ַ�ch����ת�Ƶ�״̬sj��<br>��4�� s0��Ψһ�ĳ�̬��Ҳ�ƿ�ʼ״̬����<br>��5�� F����̬����Ҳ�ƽ���״̬����������S���Ӽ������������е���̬��  </p>
 </blockquote>
-<h4 id="3-2-1-直观的表示方法："><a href="#3-2-1-直观的表示方法：" class="headerlink" title="3.2.1 直观的表示方法："></a>3.2.1 直观的表示方法：</h4><p>（1）.状态转换图<br>（2）.状态转换矩阵<br><img src="/images/pl/pl-12.png" alt="alt">  </p>
-<h4 id="3-2-2-记号在NFA中的表现（-NFA如何识别记号）"><a href="#3-2-2-记号在NFA中的表现（-NFA如何识别记号）" class="headerlink" title="3.2.2 记号在NFA中的表现（ NFA如何识别记号）"></a>3.2.2 记号在NFA中的表现（ NFA如何识别记号）</h4><pre><code>对字符串，从初态开始，经一系列状态转移到达终态。  </code></pre><p><strong>例如</strong>：对于字符串abb，有<br>定义：move(0,a)=1,move(1,b)=2,move(2,b)=3<br>转换矩阵：m[0,a]={0,1},m[1,b]=2,m[2,b]=3<br>转换图：0a1b2b3<br>    显然，转换图最直观，即每一个记号，实质上是从初态开始到某个终态的路径上的标记。</p>
-<h4 id="3-2-3-NFA-的特点"><a href="#3-2-3-NFA-的特点" class="headerlink" title="3.2.3 NFA 的特点"></a>3.2.3 NFA 的特点</h4><pre><code>NFA识别记号的最大特点是它的不确定性，即在当前状态下对同一字符有多于一个的下一状态转移  </code></pre><h4 id="3-2-5-不确定性表现"><a href="#3-2-5-不确定性表现" class="headerlink" title="3.2.5 不确定性表现"></a>3.2.5 不确定性表现</h4><ul>
-<li>定义：move函数是1对多的；</li>
-<li>转换图：同一状态有多于一条边标记相同字符转移到不同的状态；</li>
-<li>转换矩阵：M[si,a]是一个状态的集合。 <h4 id="3-2-6-NFA识别输入序列的一般方法"><a href="#3-2-6-NFA识别输入序列的一般方法" class="headerlink" title="3.2.6 NFA识别输入序列的一般方法"></a>3.2.6 NFA识别输入序列的一般方法</h4>  反复试探所有路径，直到到达终态，或者到达不了终态。<h4 id="3-2-7-不确定性识别记号的困惑"><a href="#3-2-7-不确定性识别记号的困惑" class="headerlink" title="3.2.7 不确定性识别记号的困惑"></a>3.2.7 不确定性识别记号的困惑</h4>  识别输入序列时，在当前状态下遇到同一字符，应转移到哪个下一状态？  <h4 id="3-2-8-NFA识别记号存在的问题"><a href="#3-2-8-NFA识别记号存在的问题" class="headerlink" title="3.2.8 NFA识别记号存在的问题"></a>3.2.8 NFA识别记号存在的问题</h4></li>
-<li>只有尝试了全部可能的路径，才能确定一个输入序列不被接受，而这些路径的条数随着路径长度的增长成指数增长。</li>
-<li>识别过程中需要进行大量回溯，时间复杂度升高且算法趋于复杂。</li>
+<h4 id="3-2-1-ֱ�۵i�ʾ������"><a href="#3-2-1-ֱ�۵i�ʾ������" class="headerlink" title="3.2.1 ֱ�۵ı�ʾ������"></a>3.2.1 ֱ�۵ı�ʾ������</h4><p>��1��.״̬ת��ͼ<br>��2��.״̬ת������<br><img src="/images/pl/pl-12.png" alt="alt">  </p>
+<h4 id="3-2-2-�A���NFA�еi��֣�-NFA���ʶ��At�"><a href="#3-2-2-�A���NFA�еi��֣�-NFA���ʶ��At�" class="headerlink" title="3.2.2 �Ǻ���NFA�еı��֣� NFA���ʶ��Ǻţ�"></a>3.2.2 �Ǻ���NFA�еı��֣� NFA���ʶ��Ǻţ�</h4><pre><code>���ַ������ӳ�̬��ʼ����һϵ��״̬ת�Ƶ�����̬��  
+</code></pre><p><strong>����</strong>�������ַ���abb����<br>���壺move(0,a)=1,move(1,b)=2,move(2,b)=3<br>ת������m[0,a]={0,1},m[1,b]=2,m[2,b]=3<br>ת��ͼ��0a1b2b3<br>    ��Ȼ��ת��ͼ��ֱ�ۣ���ÿһ���Ǻţ�ʵ�����Ǵӳ�̬��ʼ��ĳ����̬��·���ϵı�ǡ�</p>
+<h4 id="3-2-3-NFA-���ص�"><a href="#3-2-3-NFA-���ص�" class="headerlink" title="3.2.3 NFA ���ص�"></a>3.2.3 NFA ���ص�</h4><pre><code>NFAʶ��Ǻŵ�����ص������Ĳ�ȷ���ԣ����ڵ�ǰ״̬�¶�ͬһ�ַ��ж���һ������һ״̬ת��  
+</code></pre><h4 id="3-2-5-��ȷ���Ա���"><a href="#3-2-5-��ȷ���Ա���" class="headerlink" title="3.2.5 ��ȷ���Ա���"></a>3.2.5 ��ȷ���Ա���</h4><ul>
+<li>���壺move������1�Զ�ģ�</li>
+<li>ת��ͼ��ͬһ״̬�ж���һ���߱����ͬ�ַ�ת�Ƶ���ͬ��״̬��</li>
+<li>ת������M[si,a]��һ��״̬�ļ��ϡ� <h4 id="3-2-6-NFAʶ���������е�һ�㷽��"><a href="#3-2-6-NFAʶ���������е�һ�㷽��" class="headerlink" title="3.2.6 NFAʶ���������е�һ�㷽��"></a>3.2.6 NFAʶ���������е�һ�㷽��</h4>  ������̽����·����ֱ��������̬�����ߵ��ﲻ����̬��<h4 id="3-2-7-��ȷ����ʶ��Aw�����"><a href="#3-2-7-��ȷ����ʶ��Aw�����" class="headerlink" title="3.2.7 ��ȷ����ʶ��Ǻŵ�����"></a>3.2.7 ��ȷ����ʶ��Ǻŵ�����</h4>  ʶ����������ʱ���ڵ�ǰ״̬������ͬһ�ַ���Ӧת�Ƶ��ĸ���һ״̬��  <h4 id="3-2-8-NFAʶ��AW��ڵ�����"><a href="#3-2-8-NFAʶ��AW��ڵ�����" class="headerlink" title="3.2.8 NFAʶ��ǺŴ��ڵ�����"></a>3.2.8 NFAʶ��ǺŴ��ڵ�����</h4></li>
+<li>ֻ�г�����ȫ�����ܵ�·��������ȷ��һ���������в������ܣ�����Щ·������������·�����ȵ�������ָ��������</li>
+<li>ʶ���������Ҫ���д������ݣ�ʱ�临�Ӷ��������㷨���ڸ��ӡ�</li>
 </ul>
-<h3 id="3-3-确定的有限自动机（DFA）"><a href="#3-3-确定的有限自动机（DFA）" class="headerlink" title="3.3 确定的有限自动机（DFA）"></a>3.3 确定的有限自动机（DFA）</h3><h4 id="3-3-1-定义"><a href="#3-3-1-定义" class="headerlink" title="3.3.1 定义"></a>3.3.1 定义</h4><blockquote>
-<p>DFA是NFA的一个特例，其中：  </p>
+<h3 id="3-3-ȷ���������Զ�����DFA��"><a href="#3-3-ȷ���������Զ�����DFA��" class="headerlink" title="3.3 ȷ���������Զ�����DFA��"></a>3.3 ȷ���������Զ�����DFA��</h3><h4 id="3-3-1-����"><a href="#3-3-1-����" class="headerlink" title="3.3.1 ����"></a>3.3.1 ����</h4><blockquote>
+<p>DFA��NFA��һ�����������У�  </p>
 <blockquote>
-<p>（1）没有状态具有ε状态转移(ε-transition)，即状态转换图中没有标记ε的边；<br>（2）对每个状态s和每个字符a，最多有一个下一状态。  </p>
+<p>��1��û��״̬���Ц�״̬ת��(��-transition)����״̬ת��ͼ��û�б�Ǧŵıߣ�<br>��2����ÿ��״̬s��ÿ���ַ�a�������һ����һ״̬��  </p>
 </blockquote>
 </blockquote>
-<h4 id="3-3-2DFA的特征（确定性）"><a href="#3-3-2DFA的特征（确定性）" class="headerlink" title="3.3.2DFA的特征（确定性）"></a>3.3.2DFA的特征（确定性）</h4><pre><code>定义：move（si, a)函数是1对1的；  
-转换图：从一个节点出发的边上标记均不相同；  
-转换矩阵：M[si,a]是一个状态。  
-且字母表不包括ε。  </code></pre><h4 id="3-3-3-DFA的等价"><a href="#3-3-3-DFA的等价" class="headerlink" title="3.3.3 DFA的等价"></a>3.3.3 DFA的等价</h4><pre><code>若有限自动机M和M&apos;识别同一正规集，则称M和M&apos;是等价的，记为M=M&apos;。</code></pre><h2 id="4-从正规式到词法分析器"><a href="#4-从正规式到词法分析器" class="headerlink" title="4 从正规式到词法分析器"></a>4 从正规式到词法分析器</h2><h3 id="构造过程"><a href="#构造过程" class="headerlink" title="构造过程"></a>构造过程</h3><h4 id="4-1-构造正规式"><a href="#4-1-构造正规式" class="headerlink" title="4.1 构造正规式"></a>4.1 构造正规式</h4><h4 id="4-2-构造NFA-（Thompson算法）"><a href="#4-2-构造NFA-（Thompson算法）" class="headerlink" title="4.2 构造NFA （Thompson算法）"></a>4.2 构造NFA （Thompson算法）</h4><pre><code>作用：将正规式转化为等价的NFA
-输入：正规式r
-输出：NFA</code></pre><p><img src="/images/pl/pl-13.png" alt="alt"></p>
-<h4 id="4-3-确定化"><a href="#4-3-确定化" class="headerlink" title="4.3 确定化"></a>4.3 确定化</h4><pre><code>不确定性：
-1. 从一个状态通过同样的字符可以达到不同的下一状态；
-2. 允许出现 ε 状态转移。
+<h4 id="3-3-2DFA��������ȷ���ԣ�"><a href="#3-3-2DFA��������ȷ���ԣ�" class="headerlink" title="3.3.2DFA��������ȷ���ԣ�"></a>3.3.2DFA��������ȷ���ԣ�</h4><pre><code>���壺move��si, a)������1��1�ģ�  
+ת��ͼ����һ���ڵ�����ı��ϱ�Ǿ�����ͬ��  
+ת������M[si,a]��һ��״̬��  
+����ĸ���������š�  
+</code></pre><h4 id="3-3-3-DFA�jc�"><a href="#3-3-3-DFA�jc�" class="headerlink" title="3.3.3 DFA�ĵȼ�"></a>3.3.3 DFA�ĵȼ�</h4><pre><code>�������Զ���M��M&#39;ʶ��ͬһ���漯�����M��M&#39;�ǵȼ۵ģ���ΪM=M&#39;��
+</code></pre><h2 id="4-������ʽ���ʷ�������"><a href="#4-������ʽ���ʷ�������" class="headerlink" title="4 ������ʽ���ʷ�������"></a>4 ������ʽ���ʷ�������</h2><h3 id="�������"><a href="#�������" class="headerlink" title="�������"></a>�������</h3><h4 id="4-1-��������ʽ"><a href="#4-1-��������ʽ" class="headerlink" title="4.1 ��������ʽ"></a>4.1 ��������ʽ</h4><h4 id="4-2-����NFA-��Thompson�㷨��"><a href="#4-2-����NFA-��Thompson�㷨��" class="headerlink" title="4.2 ����NFA ��Thompson�㷨��"></a>4.2 ����NFA ��Thompson�㷨��</h4><pre><code>���ã�������ʽת��Ϊ�ȼ۵�NFA
+���룺����ʽr
+�����NFA
+</code></pre><p><img src="/images/pl/pl-13.png" alt="alt"></p>
+<h4 id="4-3-ȷ����"><a href="#4-3-ȷ����" class="headerlink" title="4.3 ȷ����"></a>4.3 ȷ����</h4><pre><code>��ȷ���ԣ�
+1. ��һ��״̬ͨ��ͬ�����ַ����Դﵽ��ͬ����һ״̬��
+2. �������� �� ״̬ת�ơ�
 
-确定化需要做的事情：
-1. 消除多余的状态转移
-2. 消除ε状态转移
+ȷ������Ҫ�������飺
+1. ���������״̬ת��
+2. ������״̬ת��
 
-方法：
-模拟：
-子集法:</code></pre><p><img src="/images/pl/pl-14.png" alt="alt"></p>
-<pre><code>识别abb:  
-1 计算初态集：         ε-闭包({0}) = {0,1,2,4,7}，      A  
-2 从A出发经a到达： ε-闭包(smove(A, a)) = {3,8,6,7,1,2,4}， B  
-3 从B出发经b到达： ε-闭包(smove(B, b)) = {5,9,6,7,1,2,4}， C  
-4 从C出发经b到达： ε-闭包(smove(C, b)) = {5,10,6,7,1,2,4}，D  
-5 结束且D∩{10}={10}，接受。识别的路径为：A a B b C b D  
-识别abab: 
-初态集：ε-闭包(s0)={0,1,2,4,7} A
-从A出发经a到达：ε-闭包(smove(A,  a)) = {3,8,6,7,1,2,4} B
-从B出发经b到达：ε-闭包(smove(B,  b)) = {5,9,6,7,1,2,4} C
-从C出发经a到达：ε-闭包(smove(C,  a)) = {3,8,6,7,1,2,4} B
-从B出发经b到达：ε-闭包(smove(B,  b)) = {5,9,6,7,1,2,4} C
-识别路径为：A a B b C a B b C。由于C∩{10}=Φ，所以不接受 
+������
+ģ�⣺
+�Ӽ���:
+</code></pre><p><img src="/images/pl/pl-14.png" alt="alt"></p>
+<pre><code>ʶ��abb:  
+1 �����̬����         ��-�հ�({0}) = {0,1,2,4,7}��      A  
+2 ��A������a��� ��-�հ�(smove(A, a)) = {3,8,6,7,1,2,4}�� B  
+3 ��B������b��� ��-�հ�(smove(B, b)) = {5,9,6,7,1,2,4}�� C  
+4 ��C������b��� ��-�հ�(smove(C, b)) = {5,10,6,7,1,2,4}��D  
+5 ������D��{10}={10}�����ܡ�ʶ���·��Ϊ��A a B b C b D  
+ʶ��abab: 
+��̬������-�հ�(s0)={0,1,2,4,7} A
+��A������a�����-�հ�(smove(A,  a)) = {3,8,6,7,1,2,4} B
+��B������b�����-�հ�(smove(B,  b)) = {5,9,6,7,1,2,4} C
+��C������a�����-�հ�(smove(C,  a)) = {3,8,6,7,1,2,4} B
+��B������b�����-�հ�(smove(B,  b)) = {5,9,6,7,1,2,4} C
+ʶ��·��Ϊ��A a B b C a B b C������C��{10}=�������Բ����� 
 
-这就是子集法构造 DFA 的思路——子集法构造 DFA，实际上就是对 NFA 并行识别记号方法的提前计算并记录的过程！
-将 NFA 上的全部路径确定化并记录下来，就能够造出与该 NFA 等价的 DFA</code></pre><p><img src="/images/pl/pl-15.png" alt="alt"><br><img src="/images/pl/pl-16.png" alt="alt"></p>
-<h4 id="4-4-最小化"><a href="#4-4-最小化" class="headerlink" title="4.4 最小化"></a>4.4 最小化</h4><blockquote>
-<p>步骤：<br>1.初始划分：终态与非终态；<br>2.利用可区分的概念，反复分裂划分中的组Gi，直到不可再分裂；<br>3.由最终划分构造D’，关键是选代表和修改状态转移；<br>4.消除可能的死状态和不可达状态。<br>例：<br><img src="/images/pl/pl-17.png" alt="alt"></p>
+������Ӽ������� DFA ��˼·�����Ӽ������� DFA��ʵ���Ͼ��Ƕ� NFA ����ʶ��Ǻŷ�������ǰ���㲢��¼�Ĺ��̣�
+�� NFA �ϵ�ȫ��·��ȷ��������¼���������ܹ������� NFA �ȼ۵� DFA
+</code></pre><p><img src="/images/pl/pl-15.png" alt="alt"><br><img src="/images/pl/pl-16.png" alt="alt"></p>
+<h4 id="4-4-��С��"><a href="#4-4-��С��" class="headerlink" title="4.4 ��С��"></a>4.4 ��С��</h4><blockquote>
+<p>���裺<br>1.��ʼ���֣���̬�����̬��<br>2.���ÿ����ֵĸ���������ѻ����е���Gi��ֱ�������ٷ��ѣ�<br>3.�����ջ��ֹ���D’���ؼ���ѡ�������޸�״̬ת�ƣ�<br>4.�������ܵ���״̬�Ͳ��ɴ�״̬��<br>����<br><img src="/images/pl/pl-17.png" alt="alt"></p>
 </blockquote>
-<pre><code>图借鉴marsCatXDU的笔记  </code></pre>
+<pre><code>ͼ���marsCatXDU�ıʼ�  
+</code></pre>
       
     </div>
     
@@ -484,7 +497,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="tag"># 编译原理</a>
+            <a href="/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%AD%EF%BF%BD%EF%BF%BD/" rel="tag"># ����ԭ��</a>
           
         </div>
       
@@ -497,8 +510,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/12/myblog/myblog/" rel="next" title="hexo的next主题相关设定">
-                <i class="fa fa-chevron-left"></i> hexo的next主题相关设定
+              <a href="/2020/07/12/myblog/myblog/" rel="next" title="hexo��next��������趨">
+                <i class="fa fa-chevron-left"></i> hexo��next��������趨
               </a>
             
           </div>
@@ -645,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#词法分析"><span class="nav-number">1.</span> <span class="nav-text">词法分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-number">1.1.</span> <span class="nav-text">1 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1相关问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1相关问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1单词的基本分类："><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.1.1单词的基本分类：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2术语："><span class="nav-number">1.1.1.2.</span> <span class="nav-text">1.1.2术语：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2词法分析器的功能和与工作方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2词法分析器的功能和与工作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1词法分析器的功能："><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1词法分析器的功能：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-工作方式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.2 工作方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-源程序的输入和预处理"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 源程序的输入和预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1源程序的输入。"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">1.3.1源程序的输入。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2预处理"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">1.3.2预处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-模式的形式化描述"><span class="nav-number">1.2.</span> <span class="nav-text">2 模式的形式化描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-语言"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 语言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1定义-乔姆斯基（Chomsky）"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">2.1.1定义(乔姆斯基（Chomsky）):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.1.2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3字符串的运算："><span class="nav-number">1.2.1.3.</span> <span class="nav-text">2.1.3字符串的运算：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2正规式和正规集"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2正规式和正规集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-四类文法（略过"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">2.2.1 四类文法（略过</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-正规式"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">2.2.2 正规式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-运算的优先级与结合性："><span class="nav-number">1.2.2.3.</span> <span class="nav-text">2.2.3 运算的优先级与结合性：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-正规式的代数性质："><span class="nav-number">1.2.2.4.</span> <span class="nav-text">2.2.4 正规式的代数性质：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-正规式的简化"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">2.2.5 正规式的简化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-有限自动机"><span class="nav-number">1.3.</span> <span class="nav-text">3 有限自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-状态转换图"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 状态转换图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1定义"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">3.1.1定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-不确定的有限自动机（NFA）"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 不确定的有限自动机（NFA）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-直观的表示方法："><span class="nav-number">1.3.2.1.</span> <span class="nav-text">3.2.1 直观的表示方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-记号在NFA中的表现（-NFA如何识别记号）"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">3.2.2 记号在NFA中的表现（ NFA如何识别记号）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-NFA-的特点"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">3.2.3 NFA 的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-5-不确定性表现"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">3.2.5 不确定性表现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-6-NFA识别输入序列的一般方法"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">3.2.6 NFA识别输入序列的一般方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-7-不确定性识别记号的困惑"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">3.2.7 不确定性识别记号的困惑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-8-NFA识别记号存在的问题"><span class="nav-number">1.3.2.7.</span> <span class="nav-text">3.2.8 NFA识别记号存在的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-确定的有限自动机（DFA）"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 确定的有限自动机（DFA）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-定义"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">3.3.1 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2DFA的特征（确定性）"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">3.3.2DFA的特征（确定性）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3-DFA的等价"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3.3.3 DFA的等价</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-从正规式到词法分析器"><span class="nav-number">1.4.</span> <span class="nav-text">4 从正规式到词法分析器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造过程"><span class="nav-number">1.4.1.</span> <span class="nav-text">构造过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-构造正规式"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">4.1 构造正规式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-构造NFA-（Thompson算法）"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">4.2 构造NFA （Thompson算法）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-确定化"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">4.3 确定化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-最小化"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">4.4 最小化</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#�ʷ�����"><span class="nav-number">1.</span> <span class="nav-text">�ʷ�����</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-����"><span class="nav-number">1.1.</span> <span class="nav-text">1 ����</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1�������"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1�������</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1���ʵL������ࣺ"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.1.1���ʵĻ������ࣺ</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2���"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">1.1.2���</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2�ʷ��������L��ܺ��빤����ʽ"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2�ʷ��������Ĺ��ܺ��빤����ʽ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1�ʷ��������L��ܣ�"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1�ʷ��������Ĺ��ܣ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-������ʽ"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.2 ������ʽ</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-Դ����������Ԥ����"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 Դ����������Ԥ����</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1Դ��������롣"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">1.3.1Դ��������롣</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2Ԥ����"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">1.3.2Ԥ����</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-gʽ����ʽ������"><span class="nav-number">1.2.</span> <span class="nav-text">2 ģʽ����ʽ������</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-����"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 ����</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1����-��k˹����Chomsky��"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">2.1.1����(��ķ˹����Chomsky��):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.1.2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3�ַ��������㣺"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">2.1.3�ַ��������㣺</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2����ʽ�����漯"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2����ʽ�����漯</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-�����k����Թ�"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">2.2.1 �����ķ����Թ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-����ʽ"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">2.2.2 ����ʽ</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-��������c������ԣ�"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">2.2.3 ��������ȼ������ԣ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-����ʽ�J������ʣ�"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">2.2.4 ����ʽ�Ĵ������ʣ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-����ʽ�l�"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">2.2.5 ����ʽ�ļ�</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-�����Զ���"><span class="nav-number">1.3.</span> <span class="nav-text">3 �����Զ���</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-״̬ת��ͼ"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 ״̬ת��ͼ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1����"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">3.1.1����</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-��ȷ���������Զ�����NFA��"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 ��ȷ���������Զ�����NFA��</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-ֱ�۵i�ʾ������"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">3.2.1 ֱ�۵ı�ʾ������</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-�A���NFA�еi��֣�-NFA���ʶ��At�"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">3.2.2 �Ǻ���NFA�еı��֣� NFA���ʶ��Ǻţ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-NFA-���ص�"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">3.2.3 NFA ���ص�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-5-��ȷ���Ա���"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">3.2.5 ��ȷ���Ա���</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-6-NFAʶ���������е�һ�㷽��"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">3.2.6 NFAʶ���������е�һ�㷽��</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-7-��ȷ����ʶ��Aw�����"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">3.2.7 ��ȷ����ʶ��Ǻŵ�����</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-8-NFAʶ��AW��ڵ�����"><span class="nav-number">1.3.2.7.</span> <span class="nav-text">3.2.8 NFAʶ��ǺŴ��ڵ�����</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-ȷ���������Զ�����DFA��"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 ȷ���������Զ�����DFA��</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-����"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">3.3.1 ����</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2DFA��������ȷ���ԣ�"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">3.3.2DFA��������ȷ���ԣ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-3-DFA�jc�"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3.3.3 DFA�ĵȼ�</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-������ʽ���ʷ�������"><span class="nav-number">1.4.</span> <span class="nav-text">4 ������ʽ���ʷ�������</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#�������"><span class="nav-number">1.4.1.</span> <span class="nav-text">�������</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-��������ʽ"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">4.1 ��������ʽ</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-����NFA-��Thompson�㷨��"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">4.2 ����NFA ��Thompson�㷨��</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-ȷ����"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">4.3 ȷ����</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-��С��"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">4.4 ��С��</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

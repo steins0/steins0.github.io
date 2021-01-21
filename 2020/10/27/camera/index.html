@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="原题重述电影评分已成为电影消费者重要信息来源。中国电影线上市场中的评价标准主要有三种，可以概括为官方认可度、口碑影响力和受众关注度。系统主要实现对电影多角度线上评价体系。 一个电影评分软件应该实现的功能 主界面  用于显示电影目录，包括电影介绍，电影评分、出品日期、导演、主演等信息 注册&#x2F;登录 评分系统  包含一个具体的分数（来自用户的打分，通过算法计算后可以得到结果），著名人物的点评，甚至其他网">
+<meta name="description" content="ԭ��������Ӱ�����ѳ�Ϊ��Ӱ��������Ҫ��Ϣ��Դ���й���Ӱ�����г��е����۱�׼��Ҫ�����֣����Ը���Ϊ�ٷ��Ͽɶȡ��ڱ�Ӱ���������ڹ�ע�ȡ�ϵͳ��Ҫʵ�ֶԵ�Ӱ��Ƕ�����������ϵ�� һ����Ӱ��������Ӧ��ʵ�ֵĹ��� ������   ������ʾ��ӰĿ¼��������Ӱ���ܣ���Ӱ���">
 <meta property="og:type" content="article">
-<meta property="og:title" content="方向设计">
+<meta property="og:title" content="�������">
 <meta property="og:url" content="http://yoursite.com/2020/10/27/camera/index.html">
 <meta property="og:site_name" content="steins">
-<meta property="og:description" content="原题重述电影评分已成为电影消费者重要信息来源。中国电影线上市场中的评价标准主要有三种，可以概括为官方认可度、口碑影响力和受众关注度。系统主要实现对电影多角度线上评价体系。 一个电影评分软件应该实现的功能 主界面  用于显示电影目录，包括电影介绍，电影评分、出品日期、导演、主演等信息 注册&#x2F;登录 评分系统  包含一个具体的分数（来自用户的打分，通过算法计算后可以得到结果），著名人物的点评，甚至其他网">
+<meta property="og:description" content="ԭ��������Ӱ�����ѳ�Ϊ��Ӱ��������Ҫ��Ϣ��Դ���й���Ӱ�����г��е����۱�׼��Ҫ�����֣����Ը���Ϊ�ٷ��Ͽɶȡ��ڱ�Ӱ���������ڹ�ע�ȡ�ϵͳ��Ҫʵ�ֶԵ�Ӱ��Ƕ�����������ϵ�� һ����Ӱ��������Ӧ��ʵ�ֵĹ��� ������   ������ʾ��ӰĿ¼��������Ӱ���ܣ���Ӱ���">
 <meta property="article:published_time" content="2020-10-27T12:17:12.000Z">
-<meta property="article:modified_time" content="2020-10-28T01:46:02.935Z">
+<meta property="article:modified_time" content="2021-01-21T07:03:05.576Z">
 <meta property="article:author" content="Steins.lei">
 <meta name="twitter:card" content="summary">
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>方向设计 | steins</title>
+  <title>������� | steins</title>
   
 
 
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">方向设计</h1>
+          <h1 class="post-title" itemprop="name headline">�������</h1>
         
 
         <div class="post-meta">
@@ -318,68 +318,35 @@
       
 
       
-        <h1 id="原题重述"><a href="#原题重述" class="headerlink" title="原题重述"></a>原题重述</h1><p>电影评分已成为电影消费者重要信息来源。中国电影线上市场中的评价标准主要有三种，可以概括为官方认可度、口碑影响力和受众关注度。系统主要实现对电影多角度线上评价体系。</p>
-<h1 id="一个电影评分软件应该实现的功能"><a href="#一个电影评分软件应该实现的功能" class="headerlink" title="一个电影评分软件应该实现的功能"></a>一个电影评分软件应该实现的功能</h1><ul>
-<li><strong>主界面</strong>  <pre><code>用于显示电影目录，包括电影介绍，电影评分、出品日期、导演、主演等信息</code></pre></li>
-<li><strong>注册/登录</strong></li>
-<li><strong>评分系统</strong>  <pre><code>包含一个具体的分数（来自用户的打分，通过算法计算后可以得到结果），著名人物的点评，甚至其他网站的评分引用等</code></pre></li>
-<li><strong>电影信息展示</strong>  <pre><code>电影的奖项、票房数据，各个网站观看次数，在知乎、贴吧、豆瓣等社区的讨论热度等</code></pre><h1 id="重难点"><a href="#重难点" class="headerlink" title="重难点"></a>重难点</h1></li>
-<li><strong>电影信息获取</strong><br>目前来看一个合格的评分数据需要足够的电影评分数量作为基础，那么首先要实现的就是得到足够的电影资料，并将之展示出来，才能让用户的评分就可能公正。</li>
-<li><strong>评分系统</strong><br>让电影的评分系统能实现多人评分并将结果计算显示在系统中</li>
-<li><strong>线上系统</strong><br>制作的项目要具有一个可供多人通过网络访问的渠道，并有效的处理数据<h1 id="分块实现"><a href="#分块实现" class="headerlink" title="分块实现"></a>分块实现</h1><h2 id="电影信息获取"><a href="#电影信息获取" class="headerlink" title="电影信息获取"></a>电影信息获取</h2></li>
+        <h1 id="ԭ������"><a href="#ԭ������" class="headerlink" title="ԭ������"></a>ԭ������</h1><p>��Ӱ�����ѳ�Ϊ��Ӱ��������Ҫ��Ϣ��Դ���й���Ӱ�����г��е����۱�׼��Ҫ�����֣����Ը���Ϊ�ٷ��Ͽɶȡ��ڱ�Ӱ���������ڹ�ע�ȡ�ϵͳ��Ҫʵ�ֶԵ�Ӱ��Ƕ�����������ϵ��</p>
+<h1 id="һ����Ӱ��������Ӧ��ʵ�ֵL���"><a href="#һ����Ӱ��������Ӧ��ʵ�ֵL���" class="headerlink" title="һ����Ӱ��������Ӧ��ʵ�ֵĹ���"></a>һ����Ӱ��������Ӧ��ʵ�ֵĹ���</h1><ul>
+<li><strong>������</strong>  <pre><code> ������ʾ��ӰĿ¼��������Ӱ���ܣ���Ӱ���֡���Ʒ���ڡ����ݡ����ݵ���Ϣ
+</code></pre></li>
+<li><strong>ע��/��¼</strong></li>
+<li><strong>����ϵͳ</strong>  <pre><code>����һ������ķ����������û��Ĵ�֣�ͨ���㷨�������Եõ����������������ĵ���������������վ���������õ�
+</code></pre></li>
+<li><strong>��Ӱ��Ϣչʾ</strong>  <pre><code>��Ӱ�Ľ��Ʊ�����ݣ�������վ�ۿ���������֪�������ɡ�����������������ȶȵ�
+</code></pre><h1 id="���ѵ�"><a href="#���ѵ�" class="headerlink" title="���ѵ�"></a>���ѵ�</h1></li>
+<li><strong>��Ӱ��Ϣ��ȡ</strong><br>Ŀǰ����һ���ϸ������������Ҫ�㹻�ĵ�Ӱ����������Ϊ��������ô����Ҫʵ�ֵľ��ǵõ��㹻�ĵ�Ӱ���ϣ�����֮չʾ�������������û������־Ϳ��ܹ�����</li>
+<li><strong>����ϵͳ</strong><br>�õ�Ӱ������ϵͳ��ʵ�ֶ������ֲ������������ʾ��ϵͳ��</li>
+<li><strong>����ϵͳ</strong><br>��������ĿҪ����һ���ɹ�����ͨ��������ʵ�����������Ч�Ĵ�������<h1 id="�ֿ�ʵ��"><a href="#�ֿ�ʵ��" class="headerlink" title="�ֿ�ʵ��"></a>�ֿ�ʵ��</h1><h2 id="��Ӱ��Ϣ��ȡ"><a href="#��Ӱ��Ϣ��ȡ" class="headerlink" title="��Ӱ��Ϣ��ȡ"></a>��Ӱ��Ϣ��ȡ</h2></li>
 </ul>
 <ol>
-<li>python爬取猫眼电影信息（已完成）</li>
-<li>获取电影评论</li>
+<li>python��ȡè�۵�Ӱ��Ϣ������ɣ�</li>
+<li>��ȡ��Ӱ����</li>
 </ol>
-<h2 id="系统前端"><a href="#系统前端" class="headerlink" title="系统前端"></a>系统前端</h2><p>基于bootstrap框架的html+css+js页面</p>
+<h2 id="ϵͳj��"><a href="#ϵͳj��" class="headerlink" title="ϵͳǰ��"></a>ϵͳǰ��</h2><p>����bootstrap��ܵ�html+css+jsҳ��</p>
 <ol>
-<li>登录界面<br>目前：本地的简单验证登录<br>后续目标：线上登陆需要增加cookie和数据库连接</li>
-<li>主页面<br>简单的信息展示和单一页面的跳转<br>后续目标：放置更多的电影信息与分类</li>
-<li>电影子页面<br>目前：分数展示与电影的具体信息放置<br>后续目标：打分功能的完善，分数、打分人数与数据库的连接</li>
+<li>��¼����<br>Ŀǰ�����صļ���֤��¼<br>����Ŀ�꣺���ϵ�½��Ҫ����cookie�����ݿ�����</li>
+<li>��ҳ��<br>�򵥵���Ϣչʾ�͵�һҳ�����ת<br>����Ŀ�꣺���ø���ĵ�Ӱ��Ϣ�����</li>
+<li>��Ӱ��ҳ��<br>Ŀǰ������չʾ���Ӱ�ľ�����Ϣ����<br>����Ŀ�꣺��ֹ��ܵ����ƣ�������������������ݿ������</li>
 </ol>
-<h2 id="系统后端"><a href="#系统后端" class="headerlink" title="系统后端"></a>系统后端</h2><ol>
-<li>用mysql写一个用于存储用户名密码，电影评分信息和评论的数据库</li>
-<li>通过js将数据库与网页连接通信<h3 id="数据库的表的规划"><a href="#数据库的表的规划" class="headerlink" title="数据库的表的规划"></a>数据库的表的规划</h3>用户表：  <table>
-<thead>
-<tr>
-<th>用户名</th>
-<th>密码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>char（20）</td>
-<td>char(20)</td>
-</tr>
-<tr>
-<td>电影信息表：</td>
-<td></td>
-</tr>
-<tr>
-<td>电影名</td>
-<td>电影评分</td>
-</tr>
-<tr>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>电影评论表</td>
-<td></td>
-</tr>
-<tr>
-<td>电影名</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</li>
+<h2 id="ϵͳ���"><a href="#ϵͳ���" class="headerlink" title="ϵͳ���"></a>ϵͳ���</h2><ol>
+<li>��mysqlдһ�����ڴ洢�û������룬��Ӱ������Ϣ�����۵����ݿ�</li>
+<li>ͨ��js�����ݿ�����ҳ����ͨ��<h3 id="���ݿ�i��L滮"><a href="#���ݿ�i��L滮" class="headerlink" title="���ݿ�ı��Ĺ滮"></a>���ݿ�ı��Ĺ滮</h3>�û�����<br>| �û��� | ���� |<br>|  ——  | ——  |<br>| char��20�� | char(20) |<br>��Ӱ��Ϣ����<br>|��Ӱ��|��Ӱ����|��������|<br>| —-|—-|—-|<br>��Ӱ���۱�<br>|��Ӱ��|�û���|����|<br>| —-|—-|—-|  </li>
 </ol>
-<h1 id="线上系统"><a href="#线上系统" class="headerlink" title="线上系统"></a>线上系统</h1><p>还未开始，预期通过上传到github page或者买个云服务器，使页面能在互联网上被浏览</p>
-<p>十五周上课-研究生考试复习建议</p>
+<h1 id="����ϵͳ"><a href="#����ϵͳ" class="headerlink" title="����ϵͳ"></a>����ϵͳ</h1><p>��δ��ʼ��Ԥ��ͨ���ϴ���github page��������Ʒ�������ʹҳ�����ڻ������ϱ����</p>
+<p>ʮ�����Ͽ�-�о������Ը�ϰ����</p>
 
       
     </div>
@@ -414,8 +381,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/11/12/review/" rel="prev" title="数据结构提纲">
-                数据结构提纲 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/11/12/review/" rel="prev" title="���ݽṹ���">
+                ���ݽṹ��� <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -552,7 +519,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原题重述"><span class="nav-number">1.</span> <span class="nav-text">原题重述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个电影评分软件应该实现的功能"><span class="nav-number">2.</span> <span class="nav-text">一个电影评分软件应该实现的功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重难点"><span class="nav-number">3.</span> <span class="nav-text">重难点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分块实现"><span class="nav-number">4.</span> <span class="nav-text">分块实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电影信息获取"><span class="nav-number">4.1.</span> <span class="nav-text">电影信息获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统前端"><span class="nav-number">4.2.</span> <span class="nav-text">系统前端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统后端"><span class="nav-number">4.3.</span> <span class="nav-text">系统后端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库的表的规划"><span class="nav-number">4.3.1.</span> <span class="nav-text">数据库的表的规划</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线上系统"><span class="nav-number">5.</span> <span class="nav-text">线上系统</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ԭ������"><span class="nav-number">1.</span> <span class="nav-text">ԭ������</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#һ����Ӱ��������Ӧ��ʵ�ֵL���"><span class="nav-number">2.</span> <span class="nav-text">һ����Ӱ��������Ӧ��ʵ�ֵĹ���</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#���ѵ�"><span class="nav-number">3.</span> <span class="nav-text">���ѵ�</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�ֿ�ʵ��"><span class="nav-number">4.</span> <span class="nav-text">�ֿ�ʵ��</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#��Ӱ��Ϣ��ȡ"><span class="nav-number">4.1.</span> <span class="nav-text">��Ӱ��Ϣ��ȡ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ϵͳj��"><span class="nav-number">4.2.</span> <span class="nav-text">ϵͳǰ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ϵͳ���"><span class="nav-number">4.3.</span> <span class="nav-text">ϵͳ���</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#���ݿ�i��L滮"><span class="nav-number">4.3.1.</span> <span class="nav-text">���ݿ�ı��Ĺ滮</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#����ϵͳ"><span class="nav-number">5.</span> <span class="nav-text">����ϵͳ</span></a></li></ol></div>
             
 
           </div>
